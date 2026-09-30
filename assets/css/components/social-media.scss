@@ -1,0 +1,46 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+.social-networks {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+
+	&--footer {
+		background-color: colors.$color-tertiary;
+
+		.icon-social {
+			i{
+				color: colors.$footer-social-media-icon;
+				&:hover{
+					color: colors.$footer-social-media-icon-hover;
+				}
+			}
+		}
+	}
+	.icon-social {
+		padding: 5px;
+		margin: 0 5px;
+
+		i {
+			color: colors.$social-media-icon;
+			&:hover{
+				color: colors.$social-media-icon-hover;
+			}
+		}
+	}
+}
+
+.footer__widgets .social-networks{
+	i{
+		color: colors.$footer-social-media-icon;
+		&:hover{
+			color: colors.$footer-social-media-icon-hover;
+		}
+	}
+}

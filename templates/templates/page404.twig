@@ -1,0 +1,40 @@
+{#
+		Templates MRK Theme Merak - Single Page Error 404
+		=========================
+		Description:
+		- Template 
+ 
+		Campos: 
+			Tipo de entrada: {{ post.post_type }}
+			ID: {{ post.ID }}
+			Titulo: {{ post.title }}
+			Contenido: {{ post.content }}
+			Autor nombre: {{ post.author.name }}
+			Autor Enlace: {{ post.author.link }}
+			Fecha:  {{ post.date }}
+			Taxonomias: {{ post.categories }}
+			Etiquetas: {{ post.tags}}
+			Cabecera: {{ get_image(post.heading_desktop) }}
+			Cabecera tabletas: {{ get_image(post.heading_tablet) }}
+			Cabecera moviles: {{ get_image(post.heading_mobile) }}
+			thumbnail:  {{ post.thumbnail.src|resize(450, 450) }}
+			elementos relacionados por p2p: {{ post|apply_filters('p2p/relationships', 'post_to_page') }}
+#}
+{% extends "templates/page.twig" %}
+{% block content %}
+	<section id="post-{{ post.ID }}" class="post-type-{{ post.post_type }} error-page" role="wall">
+		<div class="error-content">
+			<i class="fa-solid fa-helmet-safety error-icon"></i>
+			<h1 class="error-code">404</h1>
+			<h2 class="error-title">Página no encontrada</h2>
+			<p class="error-description">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+																		      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</p>
+			<div class="wp-block-button">
+				<a href="/home" class="wp-block-button__link wp-element-button">Página de inicio</a>
+			</div>
+		</div>
+		{# {{ post.content }} #}
+	</section>
+{% endblock %}

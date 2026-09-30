@@ -1,0 +1,28 @@
+{#
+		Templates MRK Theme Merak - Single Page 
+		=========================
+		Description:
+		- Template 
+ 
+		Campos: 
+			Tipo de entrada: {{ post.post_type }}
+			ID: {{ post.ID }}
+			Titulo: {{ post.title }}
+			Contenido: {{ post.content }}
+			Autor nombre: {{ post.author.name }}
+			Autor Enlace: {{ post.author.link }}
+			Fecha:  {{ post.date }}
+			Taxonomias: {{ post.categories }}
+			Etiquetas: {{ post.tags}}
+			Cabecera: {{ get_image(post.heading_desktop) }}
+			Cabecera tabletas: {{ get_image(post.heading_tablet) }}
+			Cabecera moviles: {{ get_image(post.heading_mobile) }}
+			thumbnail:  {{ post.thumbnail.src|resize(450, 450) }}
+			elementos relacionados por p2p: {{ post|apply_filters('p2p/relationships', 'post_to_page') }}
+#}
+{% extends "templates/layouts/base.twig" %}
+{% block content %}
+  <section id="post-{{ post.ID }}" class="post-type-{{ post.post_type }} page__front" role="wall">
+    {{ post.content }}
+  </section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{#
+	Organism-Componets Theme Merak - Teaser Card
+	=========================
+	Description:
+	- Tease Article Component for Post Grid and Slider
+	Campos: 
+		Titulo: {{ post.title }}
+		Enlace : {{ post.link }}
+		Fecha: {{ post.date }}
+		Imagen destacada: {{ post.thumbnail|adjust(450,250) }}
+		Extracto: {{ post.preview.length(20).read_more(false) }}
+		Tipo de post: {{post.post_type}} -> El valor debe ser card
+		ID: {{post.ID}}
+#}
+<article class="tease tease--{{card.post_type}}" id="tease-{{post.ID}}">
+	{% if card.thumbnail is empty %}
+		{% set image = theme.link ~ '/images/Thumbnail-1.png' %}
+		<img class="tease__img" src="{{ image }}">
+	{% else %}
+		<img class="tease__img" src="{{ card.thumbnail }}">
+	{% endif %}
+	<div class="tease__post">
+		<h2 class="tease__title">
+			<a href="{{ post.link }}">{{ card.title }}</a>
+		</h2>
+		<p class="tease__preview">{{ card.preview }}</p>
+		<div class="tease__link">
+			<a href="{{ item.link }}">Conoce más</a>
+			<i class="fa-solid fa-arrow-right"></i>
+		</div>
+	</div>
+</article>

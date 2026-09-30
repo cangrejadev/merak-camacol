@@ -1,0 +1,31 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de navegacion de WordPress
+.wp-block-navigation {
+    border-top: 3px solid colors.$header-border;
+	background: colors.$header-background;
+    transition: padding 0.9s;
+    .wp-block-page-list{
+        .wp-block-pages-list__item{
+            &__link{
+                display: block;
+                padding: #{vars.$base-margin} 0;
+                font-weight: vars.$bold;
+                font-family: vars.$font-body;
+                color: colors.$nav-link;
+                text-decoration: none;
+                transition: color 0.6s;
+                transition: font-size vars.$transition-time, color vars.$transition-time, border-bottom 0.3s;
+    
+                &:hover,
+                .current-menu-item & {
+                    color: colors.$nav-link-hover;
+                }
+            }
+        }
+    }
+}

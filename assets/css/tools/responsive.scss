@@ -1,0 +1,64 @@
+$mobile-screen-min: 320px;
+$mobile-screen-mid: 500px;
+$mobile-screen-max: 767px;
+$tablet-screen-min: 768px;
+$tablet-screen-max: 1023px;
+$large-screen-min: 1024px;
+$large-screen-mid: 1600px;
+$large-screen-max: 1800px;
+$extra-large-screen: 1801px;
+
+//Mobile
+//min-width:320px - max-width: 1023px
+$small-general: "only screen and (min-width: #{$mobile-screen-min}) and (max-width: #{$tablet-screen-max})";
+//min-width 767px
+$small-only: "only screen and (max-width: #{$mobile-screen-max})";
+//min-width 320px - max-width:767px
+$mobile: "only screen and (min-width: #{$mobile-screen-min}) and (max-width: #{$mobile-screen-max})";
+//min-width 320px - max-width:500px
+$mobile-small: "only screen and (min-width: #{$mobile-screen-min}) and (max-width: #{$mobile-screen-mid})";
+
+//* Tablet */
+//min-width: 768px - max-width: 1023px
+$tablet: "only screen and (min-width: #{$tablet-screen-min}) and (max-width: #{$tablet-screen-max})";
+//min-width 768px
+$medium-tablet: "only screen and (min-width: #{$tablet-screen-min})";
+$tablet-max: "only screen and (min-width: #{$tablet-screen-max})";
+//min-width: 500px - max-width: 1023px
+$tablet-large: "only screen and (min-width: #{$mobile-screen-mid}) and (max-width: #{$tablet-screen-max})";
+
+//Desktop
+//min-width 1024px
+$large: "only screen and (min-width: #{$large-screen-min})";
+//min-width 1801px
+$extra-large: "only screen and (min-width: #{$extra-large-screen})";
+//min-width: 1024px - max-width:1800px
+$large-only: "only screen and (min-width: #{$large-screen-min}) and (max-width: #{$large-screen-max})";
+//min-width: 1801px
+$x-large-only: "only screen and (min-width: #{$extra-large-screen})";
+
+/* Orientation */
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+$printer: "only print";
+$screen: "only screen";
+
+/*OLD*/
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1600px;
+
+/* Orientation */
+$landscape: "only screen and (orientation: landscape)";
+$portrait: "only screen and (orientation: portrait)";
+$printer: "only print";
+$screen: "only screen";
+
+
+//Mobile Viejo 
+$desktop-small: "#{$screen} and (min-width: #{$lg})";
+$desktop-general: "#{$screen} and (min-width: #{$xl})";
+$x-large-only: "#{$screen} and (min-width: #{$xxl})";

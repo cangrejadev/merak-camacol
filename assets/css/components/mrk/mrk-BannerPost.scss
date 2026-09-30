@@ -1,0 +1,67 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de Banner post 
+
+.post-feature {
+	height: 400px;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&__content {
+		display: flex;
+		align-items: center;
+		height: 100%;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		color: colors.$color-primary;
+		font-size: 2rem;
+		font-family: vars.$font-body;
+		font-weight: vars.$extra-bold;
+		line-height: 1.25em;
+		letter-spacing: .05rem;
+		text-transform: uppercase;
+	}
+
+	&__link {
+		margin-bottom: 30px;
+		padding: 0.5rem 1.5rem;
+		border-radius: 0.15rem !important;
+		color: colors.$color-white;
+		font-size: 1rem;
+		font-family: vars.$font-body;
+		font-weight: vars.$extra-bold;
+		text-transform: uppercase;
+		background-color: colors.$color-primary;
+	}
+	&--movil {
+		@media #{responsive.$tablet} {
+			display: none;
+		}
+	}
+	&--tablet {
+		display: none;
+		@media #{responsive.$tablet} {
+			display: block;
+		}
+		@media #{responsive.$desktop-small} {
+			display: none;
+		}
+	}
+	&--desktop {
+		display: none;
+		@media #{responsive.$desktop-small} {
+			display: block;
+		}
+	}
+}

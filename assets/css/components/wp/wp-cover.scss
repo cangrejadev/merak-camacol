@@ -1,0 +1,12 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque cover dentro de slider 
+.wp-block-mrktax-slide{
+    .wp-block-cover {
+        min-height: 70vh;
+    }
+}

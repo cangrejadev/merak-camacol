@@ -1,0 +1,89 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+
+// Tipografias 
+p {
+	margin-bottom: 1rem !important;
+	// font-family: vars.$font-body;
+	line-height: 1.1em;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: colors.$enlace;
+	&:hover {
+		color: colors.$enlace-hover;
+		text-decoration: none;	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: vars.$font-title;
+	color: colors.$title;
+	padding: 0.2em 0;
+}
+h1 {
+	font-size: calc(2rem + 1vw);
+	line-height: 1.2;
+	@media #{responsive.$large} {
+		font-size: calc(3rem + 1vw);
+		line-height: 1.2;
+	}
+}
+h2 {
+	font-size: calc(1.7rem + 1vw);
+	line-height: 1.2;
+	@media #{responsive.$large} {
+		font-size: calc(2.3rem + 1vw);
+		line-height: 1.2;
+	}
+}
+h3 {
+	font-size: calc(1.5rem + 1vw);
+	line-height: 1.2;
+	@media #{responsive.$large} {
+		font-size: calc(2rem + 1vw);
+		line-height: 1.2;
+	}
+}
+h4 {
+	font-size: calc(1.35rem + 1vw);
+	line-height: 1.2;
+	@media #{responsive.$large} {
+		font-size: calc(1.5rem + 1vw);
+		line-height: 1.2;
+	}
+}
+h5 {
+	font-size: calc(1.2rem + 1vw);
+	line-height: 1.2;
+	@media #{responsive.$large} {
+		font-size: calc(1.2rem + 1vw);
+		line-height: 1.2;
+	}
+}
+h6 {
+	font-size: calc(1rem + 1vw);
+	line-height: 1.2;
+}
+
+
+.enlace {
+	cursor: pointer;
+}
+.fas, i{
+	color: colors.$color-primary;
+	&:hover,  &.active{
+		color: colors.$color-secundary;
+	}
+}
+.type--italic{
+	font-style: italic;
+}

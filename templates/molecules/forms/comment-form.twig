@@ -1,0 +1,33 @@
+{#
+	Molecules-Form WP - Comment Form
+	=========================
+	Description:
+	- This file contains the markup for the Wordpress comment form.
+	- The comment form is used to demonstrate the different text styles.
+#}
+<div id="respond" class="comment-respond wp-block-post-comments-form">
+	<h3 id="reply-title" class="comment-reply-title">Deja una respuesta
+		<small>
+			<a rel="nofollow" id="cancel-comment-reply-link" href="/wordpress/proyectos/pagina-ejemplo/#respond" style="display:none;">Cancelar la respuesta</a>
+		</small>
+	</h3>
+	<form action="{{ url }}" method="post" id="commentform" class="comment-form" novalidate="">
+		<p class="logged-in-as">Conectado como admin.
+			<a href="{{ url }}">Edita tu perfil</a>.
+			<a href="{{ url }}">¿Salir?</a>
+			<span class="required-field-message">Los campos obligatorios están marcados con
+				<span class="required">*</span>
+			</span>
+		</p>
+		<p class="comment-form-comment">
+			<label for="comment">Comentario
+				<span class="required">*</span>
+			</label>
+			<textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required=""></textarea>
+		</p>
+		<p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Publicar el comentario">
+			<input type="hidden" name="comment_post_ID" value="2" id="comment_post_ID">
+			<input type="hidden" name="comment_parent" id="comment_parent" value="0">
+		</p><input type="hidden" id="_wp_unfiltered_html_comment_disabled" name="_wp_unfiltered_html_comment" value="1193358c2d">
+	</form>
+</div>

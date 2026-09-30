@@ -1,0 +1,16 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de WordPress de Codigo
+
+.wp-block-code {
+    overflow-x: inherit;
+	code {
+		background-color: black;
+		color: white;
+		padding: 20px;
+	}
+}

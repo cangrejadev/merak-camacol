@@ -1,0 +1,25 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+
+.contact{
+    width: 90% !important;
+
+    margin-top: -100% !important;
+
+    @media #{responsive.$large} {
+        width: 60% !important;
+        min-height: 50vh;
+        margin-top: -350px !important;
+    }
+    .page__contact & {
+        margin-top: -80% !important;
+
+        @media #{responsive.$large} {
+            margin-top: -20% !important;
+        }
+    }
+}

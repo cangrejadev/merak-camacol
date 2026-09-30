@@ -1,0 +1,32 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque del logo de WordPress
+.wp-block-site-logo {
+
+    .custom-logo-link {
+        display: flex;
+        max-width: 100%;
+        margin: 0 auto;
+        -webkit-transition: max-width 0.3s ease-in-out;
+        -moz-transition: max-width 0.3s ease-in-out;
+        transition: max-width 0.3s ease-in-out;
+
+        @media #{responsive.$desktop-general} {
+            padding: 0 #{vars.$base-margin};
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            transition: height 1s;
+
+            .header--fixed-top & {
+                max-width: 60%;
+            }
+        }
+    }
+}

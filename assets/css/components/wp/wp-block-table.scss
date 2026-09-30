@@ -1,0 +1,52 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de WordPress de Tablas
+
+.wp-block-table {
+	table {
+		width: 100%;
+		margin-bottom: 1rem;
+		
+		tbody,
+		td,
+		tfoot,
+		th,
+		thead,
+		tr {
+			border-color: colors.$color-gray-20;
+			border-style: solid;
+			border-width: 0;
+			border-top-width: 1px;
+			border-bottom-width: 1px;
+			font-weight: vars.$regular !important;
+			text-align: inherit;
+		}
+		& > :not(caption) > * > * {
+			padding: .25rem;
+			vertical-align: top;
+
+			@media #{responsive.$large} {
+				padding: 0.5rem;
+				vertical-align: baseline;
+			}
+		}
+		& > thead {
+			vertical-align: bottom;
+			background-color: colors.$color-gray-10;
+			font-family: vars.$font-body;
+			color: colors.$color-gray-100;
+			text-align: center;
+			
+			@media #{responsive.$large} {
+				padding: .75rem 1rem;
+			}
+		}
+		& > :not(:last-child) > :last-child > * {
+			border-color: colors.$color-gray-20;
+		}
+	}
+}

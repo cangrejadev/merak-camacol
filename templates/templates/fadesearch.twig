@@ -1,0 +1,21 @@
+{#
+  Componente Modal de busqueda 
+#}
+{{ fn('do_shortcode', '[autocompletar]') }}
+<div id="fadesearch" class="fadesearch">
+	<div class="row">
+		<i class="fa fa-times close"></i>
+		<div class="fadesearch__brand" role="banner">
+		{{fn('get_custom_logo')}}
+			{# {% include "atoms/images/logo.twig" %} #}
+		</div>
+		<form method='get' class="fadesearch__buscador" action='{{ site.link }}'>
+			<div class="form-input">
+				{# <input class='clave desvanecer' type='text' name='s' id='s' placeholder='{{ __('Search keyword', MRK_D) }}' value='{{ fn('get_search_query') }}'> #}
+				<input class='clave desvanecer autocompletar' data-type="skill" type='text' name='s' id='s' placeholder='{{ __("Search keyword", MRK_D)}}' value='{{ fn('get_search_query') }}'>
+				<i class="fa fa-search search-button icon-search"></i>
+			</div>
+		</form>
+	</div>
+</div>
+<!--fin #fadesearch -->

@@ -1,0 +1,38 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+.widget {
+	@media #{responsive.$desktop-general} {
+		margin-bottom: vars.$base-margin;
+	}
+	h1,h2,h3,h4,h5,h6{
+		width: 100%;
+		color: colors.$color-primary !important;
+	}
+	h2{
+		font-size: calc(1.2rem + .9vw);
+	}
+	// Widget de busqueda
+	.wp-block-search__inside-wrapper {
+		padding: 10px 0px;
+		.wp-block-search__input {
+				border-color: colors.$color-secundary;
+		}
+		.wp-block-search__button{
+			margin-left: 0px;
+			border-color: colors.$color-secundary;
+			color: colors.$color-white;
+			background-color: colors.$color-secundary;
+		}
+	}
+
+	// Widget menu
+	&.widget_nav_menu {
+		.navbar__nav{
+			justify-content: center;
+		}
+	}
+}

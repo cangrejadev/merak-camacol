@@ -1,0 +1,19 @@
+{#
+	Molecules-Form WP - Block Search Without Button
+	=========================
+	Description:
+	- This file contains the markup for the Wordpress block search.
+	- The search form is used to demonstrate the different text styles.
+	- The search form is used to search for content on the site.
+#}
+<div class="wp-block-search__no-button wp-block-search {{ classes }}">
+	<label for="wp-block-search__input" class="wp-block-search__label screen-reader-text">{{ __("Search", MRK_D) }}</label>
+	<div class="wp-block-search__inside-wrapper">
+		{% if blog_page %}
+			<input type="search" id="wp-block-search__input" class="wp-block-search__input autocompletar" data-type="skill" name="search_text" value="{{ search_text }}" placeholder="{{ __("Search", MRK_D) }}" required="">
+		{% else %}
+			<input type="search" id="wp-block-search__input" class="wp-block-search__input autocompletar" data-type="skill" name="s" value="{{ fn('get_search_query') }}" placeholder="{{ __("Search", MRK_D) }}" required="">
+		{% endif %}
+		<i class="fa-solid fa-magnifying-glass"></i>
+	</div>
+</div>

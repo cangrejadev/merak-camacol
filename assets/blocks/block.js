@@ -1,0 +1,13 @@
+import './Accordion/block';
+import './Accordions/block';
+import './Animation/block';
+import './Catalog/block';
+import './FunderData/block';
+import './FunderRelatedNews/block';
+import './LatestPosts/block';
+import './PostsCarousel/block';
+import './Services/block';
+import './SocialNetworks/block';
+import './SupplierData/block';
+import './SupplierRelatedNews/block';
+import './TwigBlock/block';

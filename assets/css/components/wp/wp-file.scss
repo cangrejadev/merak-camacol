@@ -1,0 +1,10 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque file WordPress
+.wp-block-file {
+	margin-bottom: 1rem !important;
+}

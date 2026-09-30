@@ -1,0 +1,101 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de Slider
+
+.carousel-default  {
+	width: 1280px;
+	position: relative;
+	padding:0 1.25rem;
+	margin-bottom: 2rem !important;
+	
+	.owl-stage {
+		display: flex;
+		align-items: center;
+	}
+	.owl-stage-outer {
+		display: flex;
+		// justify-content: center;
+	}
+	&.owl-carousel {
+		.owl-item {
+			cursor: pointer;
+			img {
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+		.owl-nav {
+			position: absolute;
+			top: calc(50% - 43px);
+			width: 100%;
+			margin-top: 0px;
+			height: 0px;
+
+			button {
+				position: absolute;
+				background-color: transparent;
+				border-radius: 100px;
+				width: 30px;
+				height: 30px;
+			}
+			.owl-prev {
+				z-index: 99;
+				left: -25px;
+
+				&.disabled {
+					i {
+						color: rgba($color: colors.$color-gray-90, $alpha: 0.8);
+					}
+
+					opacity: 1;
+				}
+			}
+
+			.owl-next {
+				z-index: 99;
+				right: 25px;
+			}
+
+			i {
+				font-size: 1rem;
+				margin: 5px;
+				color: colors.$color-gray-90;
+			}
+		}
+		.owl-nav [class*="owl-"]:hover {
+			background: rgba($color: colors.$color-primary, $alpha: 0.6) ;
+			opacity: .5;
+		}
+		.owl-dots {
+			width: 100%;
+			padding: 0 0 5px 0;
+			bottom: 0;
+			right: 0;
+  		left: 0;
+			position: absolute;
+
+			span {
+				margin: 0 3px;
+				width: 30px !important;
+				height: 3px !important;
+				border-radius: 0;
+				background-color: colors.$color-primary !important;
+				opacity: .5;
+			}
+
+			.active span {
+				opacity: 1;
+			}
+		}
+	}
+	&.alignwide{
+		.owl-nav {
+			width: 100%;
+			margin-left: 0%;
+		}
+	}
+}

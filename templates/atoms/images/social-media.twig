@@ -1,0 +1,61 @@
+{#
+	Atoms-images Social media icons
+	=========================
+	Description:
+		- This file contains the markup for the icons.
+		- The icons are used to demonstrate the different icon styles.
+		- The icons are used in the header and footer of the website.
+		- The icons are used in the social media links.
+	Campos: 
+	Instagram: {{ social_network.instagram }}
+	Facebook: {{ social_network.facebook }}
+	Twitter: {{ social_network.twitter }}
+	Linkedin: {{ social_network.linkedin }}
+	Youtube: {{ social_network.youtube }}
+	Vimeo: {{ social_network.vimeo }}
+#}
+<ul class="social-networks inline-list social-networks--footer">
+	{% if social_network.instagram %}
+		<div class="icon-social">
+			<a class=" " href="{{ social_network.instagram }}" target="blank">
+				<i class="fab fa-instagram"></i>
+			</a>
+		</div>
+	{% endif %}
+	{% if social_network.facebook %}
+		<div class="icon-social">
+			<a class=" " href="{{ social_network.facebook }}" target="blank">
+				<i class="fab fa-facebook-f"></i>
+			</a>
+		</div>
+	{% endif %}
+	{% if social_network.twitter %}
+		<div class="icon-social">
+			<a class=" " href="{{ social_network.twitter }}" target="blank">
+				<i class="fab fa-twitter"></i>
+			</a>
+		</div>
+	{% endif %}
+	{% if social_network.linkedin %}
+		<div class="icon-social">
+			<a class=" " href="{{ social_network.linkedin }}" target="blank">
+				<i class="fab fa-linkedin-in"></i>
+			</a>
+		</div>
+	{% endif %}
+	{% if social_network.youtube %}
+		<div class="icon-social">
+			<a class=" " href="{{ social_network.youtube }}" target="blank">
+				<i class="fab fa-youtube"></i>
+			</a>
+		</div>
+	{% endif %}
+	{% if social_network.vimeo %}
+		<div class="icon-social">
+			<a class=" " href="{{ social_network.vimeo }}" target="blank">
+				<i class="fab fa-vimeo"></i>
+			</a>
+		</div>
+	{% endif %}
+</ul>
+

@@ -1,0 +1,9 @@
+{
+	"waypoints/jquery.waypoints.min.js": {
+		"type": "script",
+		"handle": "waypoints",
+		"dependencies": [
+			"jquery"
+		]
+	}
+}

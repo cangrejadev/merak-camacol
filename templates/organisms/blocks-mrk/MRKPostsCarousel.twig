@@ -1,0 +1,14 @@
+{#
+	Organism-Blocks MRK Carousel Gallery
+	=========================
+	Description:
+	- Block to extend the WP gallery block
+	Campos: 
+#}
+<div class="carousel-default carousel--gallery owl-carousel owl-theme" data-columns="{{ columns }}" data-autoplay="{{ autoplay }}" data-nav="{{ nav }}" data-dots="{{ dots }}">
+	{% for item in posts %}
+		<div class="slider__item">
+			{% include ["organisms/components/carousel-item-"~ item.post_type ~".twig", "organisms/components/carousel-item.twig"] with {  'item': item } %}
+		</div>
+	{% endfor %}
+</div>

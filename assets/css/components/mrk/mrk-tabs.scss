@@ -1,0 +1,62 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+
+.tab {
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+	position: relative;
+	overflow: hidden;
+	line-height: 1.5;
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased;
+
+  &__tabs {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    overflow: hidden; 
+  }
+
+  &__nav {
+    flex: 1 0 20%;
+    border-bottom: 2px solid colors.$color-primary;
+    list-style: none;
+    line-height: 38px;
+    outline: none;
+    text-decoration: none;
+    text-align: center;    
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    &.current {
+      background: colors.$color-primary;
+      a {
+        color: #fff;
+
+      }
+    }
+    a {
+      padding: 0 20px;
+      color: colors.$color-primary;
+      font-weight: 700;
+    }
+  }
+
+  &__item {
+    display: none;
+    padding: 1.5rem;
+    &:first-child {display: block;}
+  }
+}
+
+
+
+
+
+

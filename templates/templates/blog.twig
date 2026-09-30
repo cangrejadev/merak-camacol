@@ -1,0 +1,33 @@
+{#
+		Templates MRK Theme Merak - Single Post 
+		=========================
+		Description:
+		- Template 
+#}
+{% extends "templates/layouts/base.twig" %}
+
+{% block title %}
+   	<div class="container">
+		<div class="row">
+			<div class="col-12 mt-5">
+				<h1 class="">Blog</h1>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+	{% include "organisms/forms/searchFilter.twig" %}
+	<section class="container search__results">
+        <section class="grid-articles">
+            {% for post in posts %}
+                {# {% include ['molecules/components/tease-'~item.post_type~'.twig', 'molecules/components/tease.twig'] %} #}
+                {% include "organisms/components/tease.twig" with {  'tease': post } %}
+            {% endfor %}
+        </section>
+		<div class="container">
+        	{% include "molecules/navigation/pagination.twig" with { query: posts, mid_size: 2 } %}
+			{# {% include "molecules/navigation/pagination.twig" %} #}
+		</div>
+	</section>
+{% endblock %}

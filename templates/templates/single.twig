@@ -1,0 +1,59 @@
+{#
+		Templates MRK Theme Merak - Single Post 
+		=========================
+		Description:
+		- Template 
+ 
+		Campos: 
+			Tipo de entrada: {{ post.post_type }}
+			ID: {{ post.ID }}
+			Titulo: {{ post.title }}
+			Contenido: {{ post.content }}
+			Autor nombre: {{ post.author.name }}
+			Autor Enlace: {{ post.author.link }}
+			Fecha:  {{ post.date }}
+			Taxonomias: {{ post.categories }}
+			Etiquetas: {{ post.tags}}
+			Cabecera: {{ get_image(post.heading_desktop) }}
+			Cabecera tabletas: {{ get_image(post.heading_tablet) }}
+			Cabecera moviles: {{ get_image(post.heading_mobile) }}
+			thumbnail:  {{ post.thumbnail.src|resize(450, 450) }}
+			elementos relacionados por p2p: {{ post|apply_filters('p2p/relationships', 'post_to_page') }}
+#}
+{% extends "templates/layouts/base.twig" %}
+
+{% block content %}
+	{# Variable para traer el contenido del json para paterns no es necesario en WP #}
+	{# {% set post = singlePost %} #}
+
+	<article
+		class="post single-{{ post.post_type }}" id="post-{{ post.ID }} single-{{ post.post_type }}" role="wall">
+
+		{# seccion titulo #}
+		<div class="post__title">
+			<h1>{{ post.title }}</h1>
+		</div>
+
+		<section
+			class="article-content">
+			{# Contenido #}
+
+			{{post.content}}
+			{# Fin Contenido #}
+		</section>
+
+		{# {% include "organisms/comments/comment-thread.twig" %} #}
+
+		{# para compartir en redes sociales #}
+		{% include "organisms/components/social-share.twig" %}
+
+		{# Informacion autor #}
+		{% include "molecules/text/author.twig" with {author: post.author} %}
+			<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+		<h2 class="wp-block-heading has-text-align-center">Últimas Publicaciones</h2>
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		{% include "organisms/blocks-mrk/MRKLatestPosts.twig" with { posts: posts } %}
+	</article>
+
+
+{% endblock %}

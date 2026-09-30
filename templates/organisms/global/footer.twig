@@ -1,0 +1,28 @@
+{#
+	Organism-Global Theme Merak - Footer
+	=========================
+	Description:
+	- Header with 1 menu, logo on the left side.
+	- This file contains the markup for the main navigation.
+	Campos: 
+		Widgets: {{ footer_col_1 }}
+		Texto copy: {{ footer.text }}
+	Note: Tener en cuenta que el contenido del footer se debe eliminar en el template de Merak Web
+		ya que el footer se carga con el contenido de Wordpress.
+#}
+<footer id="footer" class="footer">
+	{% block footer %}
+		<div class="container footer__container">
+			<div class="footer__widgets widgets-1">
+				{{ footer_col_1 }}
+			</div>
+			<div class="footer__copy">
+				<p>{{ footer.text|format("now"|date('Y')) }}</p>
+				<p>Desarrollador por
+					<a href="https://alejandrazerda.co/">Merak Web</a>
+				</p>
+			</div>
+		</div>
+	{% endblock %}
+	{% include "templates/fadesearch.twig" %}
+</footer>

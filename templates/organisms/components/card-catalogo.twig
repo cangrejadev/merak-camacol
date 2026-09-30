@@ -1,0 +1,25 @@
+{#
+	Organism-Componets Theme Merak - Card -Catalogo
+	=========================
+	Description:
+	- card Article Component for Post Grid and Slider
+	Campos: 
+		Titulo: {{ catalogo.title }}
+		Enlace : {{ catalogo.link }}
+		Fecha: {{ catalogo.date }}
+		Imagen destacada: {{ catalogo.thumbnail|adjust(450,250) }}
+		Extracto: {{ catalogo.preview.length(20).read_more(false) }}
+		Tipo de post: {{catalogo.post_type}} -> El valor debe ser catalogo
+		ID: {{catalogo.ID}}
+#}
+<article class="card card--{{catalogo.post_type}}" id="card-{{catalogo.ID}}">
+	<div class="card__post"  style="background-image: url('{{ catalogo.imageUrl }}')">
+		<h3 class="card__title">
+			{{ catalogo.title }}
+		</h3>
+		<div class="card__link button">
+			<a class="" href="{{ catalogo.link }}">Conoce más</a>
+			<i class="fa-solid fa-arrow-right"></i>
+		</div>
+	</div>
+</article>

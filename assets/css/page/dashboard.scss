@@ -1,0 +1,66 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+.dashboard {
+	margin: 2.5rem auto !important;
+	&__menu {
+		padding: 1.5rem 1rem;
+		border-right: 1px solid colors.$color-gray-20;
+	}
+	&__account {
+		.wp-block-post-author {
+			padding: 1.156rem 0 ;
+		}
+		&__menu {
+			margin: 10px 0;
+			
+			.account__menu {
+				&__item{
+					padding: 13px 10px;
+					list-style: none;
+					i{
+						margin-right: 10px;
+					}
+					&__link {
+						color: colors.$color-black !important;
+						font-size: vars.$font-m;
+						&:hover {
+							color: colors.$color-primary;
+						}
+					}
+				}
+			}
+		}
+	}
+	&__table {
+		padding: 0.25rem;
+		position: relative;
+
+		@media #{responsive.$large} {
+			padding: 2.5rem 1rem;
+			width: 100%;
+		}
+		&__title {
+			font-size: vars.$font-xl;
+			margin-bottom: 1.875rem !important;
+		}
+		table {
+			width: 1000px !important;
+			@media #{responsive.$large} {
+				width: 100%;
+			}
+		}
+	}
+	.status-tag{
+		display: inline-block;
+		padding: 5px 10px;
+		border-radius: 20px;
+		background-color: rgba($color: colors.$color-success, $alpha: 0.4);
+		a {
+			color: colors.$color-black;
+		}
+	}
+}

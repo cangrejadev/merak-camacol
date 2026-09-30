@@ -1,0 +1,21 @@
+{#
+	Organism-Componets Theme Merak - Carousel Latest Posts - Card
+	=========================
+	Description:
+	- Carousel for Latest Posts
+	Campos: 
+		Titulo: {{ post.title }}
+		Enlace : {{ post.link }}
+		Fecha: {{ post.date }}
+		Imagen destacada: {{ post.thumbnail|adjust(450,250) }}
+		Extracto: {{ post.preview.length(20).read_more(false) }}
+		Tipo de post: {{post.post_type}} -> El valor debe ser card
+		ID: {{post.ID}}
+#}
+<div class="carousel-default carousel--latest-posts-card owl-carousel owl-theme">
+	{% for card in cards %}
+		<div class="slider--item">
+			{% include "organisms/components/card.twig" with { 'card': card } %}
+		</div>
+	{% endfor %}
+</div>

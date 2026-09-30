@@ -1,0 +1,22 @@
+div[data-type="mrk/accordion"] {
+	padding: 5px 10px;
+	border:1px solid rgb(207, 153, 153);
+
+	.text {
+		display: none;
+		border: none;
+		padding: 0;
+	}
+
+	& > div[data-unfolded="true"] .text {
+		display: block;
+	}
+
+	&.is-selected,
+	&.has-child-selected {
+		border-color: silver;
+		.text {
+			display: block;
+		}
+	}
+}

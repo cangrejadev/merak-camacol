@@ -1,0 +1,21 @@
+{
+	"owl/owl.carousel.js": {
+		"type": "script",
+		"handle": "owl",
+		"dependencies": [
+			"jquery"
+		]
+	},
+	"owl/owl.carousel.css": {
+		"type": "style",
+		"handle": "owl",
+		"dependencies": []
+	},
+	"owl/owl.theme.default.css": {
+		"type": "style",
+		"handle": "owl-theme",
+		"dependencies": [
+			"owl"
+		]
+	}
+}

@@ -1,0 +1,53 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+@for $i from 1 through 10 {
+	.mt-#{$i} {
+		margin-top: calc(#{vars.$base-margin} * #{$i});
+	}
+}
+@for $i from 1 through 10 {
+	.mb-#{$i} {
+		margin-bottom: calc(#{vars.$base-margin} * #{$i});
+	}
+}
+@for $i from 1 through 10 {
+	.mr-#{$i} {
+		margin-right: calc(#{vars.$base-margin} * #{$i});
+	}
+}
+@for $i from 1 through 10 {
+	.ml-#{$i} {
+		margin-left: calc(#{vars.$base-margin} * #{$i});
+	}
+}
+
+/* Padding */
+@for $i from 1 through 10 {
+	.p-#{$i} {
+		padding: calc(#{vars.$base-margin} * #{$i});
+	}
+}
+@for $i from 1 through 10 {
+	.pt-#{$i} {
+		padding-top: calc(#{vars.$base-margin} * #{$i});
+	}
+}
+@for $i from 1 through 10 {
+	.pb-#{$i} {
+		padding-bottom: calc(#{vars.$base-margin} * #{$i});
+	}
+}
+@for $i from 1 through 10 {
+	.pr-#{$i} {
+		padding-right: calc(#{vars.$base-margin} * #{$i});
+	}
+}
+@for $i from 1 through 10 {
+	.pl-#{$i} {
+		padding-left: calc(#{vars.$base-margin} * #{$i});
+	}
+}

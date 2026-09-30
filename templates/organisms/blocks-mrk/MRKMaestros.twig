@@ -1,0 +1,19 @@
+{#
+	Organism-Blocks MRK Theme Merak - Maetros 
+	=========================
+	Description:
+	- Block for Maestros
+	Campos: 
+	Titulo: {{ post.title }}
+	Enlace : {{ post.link }}
+	Fecha: {{ post.date }}
+	Imagen destacada: {{ post.thumbnail|adjust(450,250) }}
+	Extracto: {{ post.preview.length(20).read_more(false) }}
+	Tipo de post: {{post.post_type}}
+	ID: {{post.ID}}
+#}
+<section class="grid-articles">
+	{% for maestro in maestros %} 
+		{% include "organisms/components/tease-maestros.twig" with {  'maestro': maestro } %}
+	{% endfor %}
+</section>

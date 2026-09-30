@@ -1,0 +1,68 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+.search-content{
+    padding-top: 3%;
+    &--maestros {
+        .searcher__form {
+
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        margin-right: 1rem;
+        max-width: 100%;
+
+        @media #{responsive.$mobile-small} {
+            
+        }
+        .wp-block-search__button {
+            margin: 0 !important;
+        }
+
+    }
+    &__title {
+        font-size: vars.$font-l;
+        color: colors.$color-gray-90;
+        margin-bottom: 3rem !important;
+        span {
+            font-style: italic;
+        }
+    }
+    &__filters {
+        &__title {
+            display: block;
+            font-size: vars.$font-m;
+            font-weight: vars.$bold;
+            color: colors.$color-gray-90;
+            margin-bottom: 1rem !important;
+        }
+    }
+    &__checkboxes {
+        list-style: none;
+        input[type="checkbox"] {
+            accent-color: colors.$color-secundary; 
+          }
+    }
+}
+.search-results{
+    .container-title{
+        margin-bottom: calc(#{vars.$base-margin} * 2) ;
+    }
+    .activity-footer .container-list { padding-top: 0%;}
+}
+
+//Buscador autocomplete
+.ui-menu {
+    border-radius: 20px;
+    border-top: none !important;
+    padding: 0.5rem !important;
+    border: 1px solid colors.$color-gray-20 !important;
+    font-size: 16px !important; 
+}

@@ -1,0 +1,22 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+.grid-articles {
+  margin-bottom: 2.5rem !important;
+  @include mixin.grid(90%, 100%, 30px);
+
+  @media #{responsive.$tablet} {
+    margin-bottom: 2rem !important;
+    @include mixin.grid(45%, 1fr, 20px);
+  }
+
+  @media #{responsive.$large} {
+    @include mixin.grid(45%, 1fr, 20px);
+  }
+  @media #{responsive.$large} {
+    @include mixin.grid(23%, 1fr, 20px);
+  }
+}

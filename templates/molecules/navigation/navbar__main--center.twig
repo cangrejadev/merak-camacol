@@ -1,0 +1,52 @@
+{#
+	Molecules-Navigation Theme Merak - Centered Main menu
+	=========================
+	Description:
+	- Navigation bar with 2 menus, logo at the top centered
+	- This file contains the markup for the main navigation.
+	- The main navigation is used to demonstrate the different text styles.
+	- The main navigation is used to navigate the site.
+#}
+
+<div class="navbar__brand" role="banner">
+	{{fn('get_custom_logo')}}
+</div>
+
+<div class="navbar__secondary">
+	<ul class="navbar__nav nav align-items-center">
+		<li class="nav__item search">
+			<a class="nav__link" href="#">
+				<i class="fas fa-search search-button search"></i>
+			</a>
+		</li>
+		<li class="nav__item">
+			<a class="nav__link" href="{{ fn('wp_login_url', og.url) }}">
+				<i class="far fa-user"></i>
+			</a>
+		</li>
+		{% if(fn('function_exists', 'wc_get_cart_url')) %}
+			<li class="nav__item">
+				<a class="nav__link link" href="{{ fn('wc_get_cart_url') }}">
+					<i class="fas fa-shopping-cart"></i>
+				</a>
+			</li>
+		{% endif %}
+		<li class="nav__item">
+			<a class="nav__link language" href="#">
+				ES
+			</a>
+		</li>
+	</ul>
+</div>
+<div id="menu" class="navbar__menu justify-content-center" role="navigation">
+	{% if use_child_menu %}
+		{% include "molecules/navigation/child-menu.twig" with {
+				'items' : post.children('parent'),
+			} %}
+	{% else %}
+		{% include "molecules/navigation/menu.twig" with {
+				'menu' : menu_principal.get_items,
+			} %}
+	{% endif %}
+	<i class="fas fa-search search-button search"></i>
+</div>

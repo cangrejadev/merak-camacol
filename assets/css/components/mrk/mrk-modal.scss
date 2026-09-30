@@ -1,0 +1,113 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+
+.tease--project__modal {
+	max-width: 700px !important;
+
+
+	&__gallery {
+		padding: 10px;		
+		background-color: #fff;
+		box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+		text-align: center;
+	
+		@media #{responsive.$large}{
+      max-width: 700px;
+			margin: 40px auto;
+     }
+		&__principal {
+			width: 98%;
+			margin:	1%;
+
+			.galeria-img--full {
+				width: 100%;
+				height: auto;
+				object-fit: cover;
+				display: block;
+			}
+		}
+	
+		&__secundaria {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		
+			@media #{responsive.$large}{
+				gap: 0 10px;
+			 }
+			.galeria-img {
+				width: 32%;
+				height: auto;
+				object-fit: cover;
+			}
+		}
+	
+		&__info {
+			padding: 10px;
+			
+			@media #{responsive.$large}{
+				padding: 30px;
+			 }
+			&__title {
+				font-size: 24px;
+				font-weight: bold;
+				margin: 20px 0 10px 0;
+				color: #222;
+			}
+	
+			&__description{
+				font-size: 16px;
+				color: #444;
+				line-height: 1.5;
+				margin-bottom: 20px;
+			}
+	
+			.tease__price {
+				font-size: 18px;
+				color: #000;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+// Modal 
+.modal {
+
+	margin: 0 auto;
+	border-radius: 30px;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	border-radius: 20px;
+	background-color: rgba(#121619, 0.75);
+
+	&__info {
+		&__title {
+			font-family: vars.$font-body;
+      color: colors.$color-gray-90;
+			font-size: 1.5rem;
+			font-weight: bold;
+			
+		}
+		&__subtitle {
+      font-family: vars.$font-body;
+      color: colors.$color-gray-60;
+			margin-bottom: 20px;
+		}
+    &__star {
+      i {
+        color: colors.$color-secundary;
+      }
+      input {
+        display: none;
+      }
+    }
+	}
+}
+
+
+
+

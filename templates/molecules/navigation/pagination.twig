@@ -1,0 +1,53 @@
+{#
+	Molecules-Navigation Theme Merak - Pagination Component
+	=========================
+	Description:
+	- Pagination component for the theme.
+	- This file contains the markup for the pagination component.
+#}
+{% set pagination = query.pagination({show_all: false, mid_size: mid_size|default(5), end_size: 0}) %}
+{% if pagination.pages is not empty %}
+	<div class="container-pagination">
+		<nav class="pagination" role="navigation" aria-label="pagination">
+			{% if pagination.prev %}
+				<a class="pagination-previous icon" href="{{ pagination.prev.link }}">
+					<i class="fa-solid fa-chevron-left"></i>
+				</a>
+			{% else %}
+				<a class="pagination-previous icon" disabled>
+					<i class="fa-solid fa-chevron-left"></i>
+				</a>
+			{% endif %}
+			{% if pagination.pages|first and pagination.pages|first.current != true %}
+				<a class="pagination-previous" href="{{ fn('get_pagenum_link', 1) }}">Primera</a>
+			{% else %}
+				<a class="pagination-previous" disabled>Primera</a>
+			{% endif %}
+
+
+			{% for page in pagination.pages %}
+				{% if ((page.title == '&hellip;') or (pagination.current - page.title)|abs <= mid_size|default(5)) %}
+					{% if page.link %}
+						<a href="{{ page.link }}" class="pagination-link {{ page.class }}">{{ page.title }}</a>
+					{% else %}
+						<a class="pagination-link {% if 'current' in page.class %} is-current {% endif %} {{ page.class }}">{{ page.title }}</a>
+					{% endif %}
+				{% endif %}
+			{% endfor %}
+			{% if pagination.pages|last and pagination.pages|last.current != true %}
+				<a class="pagination-next" href="{{ fn('get_pagenum_link', pagination.total) }}">Última</a>
+			{% else %}
+				<a class="pagination-next" disabled>Última</a>
+			{% endif %}
+			{% if pagination.next %}
+				<a class="pagination-next icon" href="{{ pagination.next.link }}">
+					<i class="fa-solid fa-chevron-right"></i>
+				</a>
+			{% else %}
+				<a class="pagination-next icon" disabled>
+					<i class="fa-solid fa-chevron-right"></i>
+				</a>
+			{% endif %}
+		</nav>
+	</div>
+{% endif %}

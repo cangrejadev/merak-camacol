@@ -1,0 +1,10 @@
+<style>{% filter skip_tabs %}
+    #{{ id }}{% if autoptimize %}.lazyloaded{% endif %} {
+      background-image: url({{ get_image(image.id).src }});
+    }
+    {% for item in srcset %}
+    @media screen and (max-width: {{ item[0] }}px) {
+        #{{ id }} { background-image: url({{ image|adjust( item[1], item[2]) }}); }
+    }
+    {% endfor %}
+{% endfilter %}</style>

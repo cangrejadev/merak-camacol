@@ -1,0 +1,52 @@
+{% extends "templates/layouts/base.twig" %}
+{% import "@macros/forms.twig" as forms %}
+
+{% block content %}
+	<div class="container-fluid dashboard">
+		<div class="row">
+			<div class="dashboard__menu col-3">
+				<div class="dashboard__logo">
+					{# {% include "atoms/images/logo.twig" %} #}
+					{{fn('get_custom_logo')}}
+				</div>
+				<div class="dashboard__account">
+					<div class="wp-block-post-author">
+						<div class="wp-block-post-author__avatar">
+							<img alt="" src="" srcset="../../images/author.png 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy" decoding="async">
+						</div>
+					</div>
+					{% include "molecules/forms/searchWithoutbutton.twig" %}
+					<div class="dashboard__account__menu">
+						<ul class="account__menu">
+							<li class="account__menu__item">
+								<i class="fa-solid fa-user"></i>
+								<a class="account__menu__item__link" href="">Actualizacion de datos de perfil</a>
+							</li>
+							<li class="account__menu__item">
+								<i class="fa-solid fa-rectangle-history"></i>
+								<a class="account__menu__item__link" href="">Proyectos</a>
+							</li>
+							<li class="account__menu__item">
+								<i class="fa-solid fa-rectangle-history"></i>
+								<a class="account__menu__item__link" href="">Proyectos</a>
+							</li>
+							<li class="account__menu__item">
+								<i class="fa-solid fa-rectangle-history"></i>
+								<a class="account__menu__item__link" href="">Proyectos</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="dashboard__table col-9">
+				<h1 class="dashboard__table__title">Lista de Proyectos</h1>
+				{% include "atoms/tables/table.twig" %}
+				<div
+					class="container">
+					{% include "molecules/navigation/pagination.twig" with { query: posts, mid_size: 2 } %}
+					{# {% include "molecules/navigation/pagination.twig" %} #}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}

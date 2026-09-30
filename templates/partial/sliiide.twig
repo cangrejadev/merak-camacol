@@ -1,0 +1,24 @@
+{#
+ Componente en deshuso, revisar si es necesario
+#}
+<div id="slide-menu">
+	<nav class="navbar">
+		<div class="navbar__brand" role="banner">
+			{{fn('get_custom_logo')}}
+		</div>
+		<i class="fas fa-times slider-exit"></i>
+		<div id="menu" class="navbar__menu justify-content-start" role="navigation">
+			{% if use_child_menu %}
+				{% include "molecules/navigation/child-menu.twig" with {
+				'items' : post.children('parent'),
+				'id' : 'menu_slide'
+			} %}
+			{% else %}
+				{% include "navigation/menu.twig" with {
+				'menu' : menu_principal.get_items,
+				'id' : 'menu_slide'
+			} %}
+			{% endif %}
+		</div>
+	</nav>
+</div>

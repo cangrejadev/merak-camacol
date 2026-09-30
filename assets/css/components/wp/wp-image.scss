@@ -1,0 +1,67 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque Imagen WordPress
+
+.wp-block-image {
+	display: inline-block;
+	&.is-style-rounded {
+		img {
+			border-radius: 30px;
+		}
+	}
+	&.aligncenter {
+		margin: 0 auto;
+	}
+	.wp-element-caption {
+		margin: 0.5rem 0;
+		padding: 0.5rem;
+		border-left: 2px solid colors.$color-primary;
+		color: colors.$color-black;
+	}
+	// Animaciones para la galeria 
+	.wp-block-gallery & {
+		overflow: hidden;
+
+		img {
+			-webkit-transform: scale(1.5);
+			transform: scale(1.5);
+
+			// Escala de grises
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+
+			-webkit-transition: .3s ease-in-out;
+			transition: .3s ease-in-out;
+		}
+
+		&:hover {
+			img {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+
+				// Escala de grises
+				-webkit-filter: grayscale(0);
+				filter: grayscale(0);
+
+			}
+		}
+	}
+}
+.img-fluid {
+	width: 100%;
+	height: auto;
+}
+/* Ancho en moviles */
+@for $i from 1 through 10 {
+	$ancho: $i * 10;
+
+	.ancho-img-#{$ancho} {
+		img {
+			@include mixin.width($ancho);
+		}
+	}
+}

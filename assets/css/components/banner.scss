@@ -1,0 +1,136 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+// Bloque y/o Componente Banner
+.banner {
+	@include mixin.container-fluid;
+	margin-bottom: vars.$base-margin*3;
+
+	&__content{
+		.banner__title{
+			color:colors.$color-white !important;
+			font-size: vars.$title-font-size;
+			letter-spacing: 11px;
+			font-weight: lighter;
+			line-height: 5rem;
+			margin-bottom: 0px !important;
+		}
+	}
+
+	&__background{
+		height: 280px;
+		margin-bottom: 0 !important;
+		opacity: 0.8;
+		@include mixin.background;
+
+		@media #{responsive.$large} {
+			height: 500px;
+		}
+		@media #{responsive.$tablet} {
+			height: 300px;
+		}
+
+		&-filter {
+			@include mixin.row;
+			background-color: rgba($color: colors.$banner-background, $alpha: 0.5);
+			height: 100%;
+			&.banner-centrado {
+				-webkit-justify-content: center;
+				-moz-justify-content: center;
+				-ms-justify-content: center;
+				justify-content: center;
+				align-items: center;
+				.banner__content {
+					text-align: center;
+				}
+			}
+			&.banner-start {
+				-webkit-justify-content: flex-start;
+				-moz-justify-content: flex-start;
+				-ms-justify-content: flex-start;
+				justify-content: flex-start;
+				align-items: center;
+			}
+		}
+		&--parallax{
+			@include mixin.background-parallax;
+		}
+	}
+	&--movil {
+		@media #{responsive.$tablet} {
+			display: none;
+		}
+		@media #{responsive.$large} {
+			display: none;
+		}
+	}
+
+	&--tablet {
+		display: none;
+		@media #{responsive.$tablet} {
+			display: block;
+		}
+	}
+
+	&--desktop {
+		display: none;
+		@media #{responsive.$large} {
+			display: block;
+		}
+	}
+}
+
+.hero {
+	&__background{
+		height: 280px;
+		margin-bottom: 0 !important;
+		opacity: 0.8;
+		@include mixin.background;
+
+		@media #{responsive.$large} {
+			height: 500px;
+		}
+		@media #{responsive.$tablet} {
+			height: 300px;
+		}
+
+		&-filter {
+			@include mixin.row;
+			background-color: rgba($color: colors.$banner-background, $alpha: 0.5);
+			height: 100%;
+		}
+		&--parallax{
+			@include mixin.background-parallax;
+		}
+	}
+	&--movil {
+		width: 100% !important;
+
+		@media #{responsive.$tablet} {
+			display: none;
+		}
+		@media #{responsive.$large} {
+			display: none;
+		}
+	}
+	&--tablet {
+		display: none;
+		@media #{responsive.$tablet} {
+			display: block;
+		}
+	}
+	&--desktop {
+		display: none;
+		@media #{responsive.$large} {
+			display: block;
+		}
+	}
+	&__img {
+		height: 500px;
+		background-size: cover;
+		@include mixin.background;
+	}
+}

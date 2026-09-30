@@ -1,0 +1,11 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Grid WordPress
+
+.wp-block-column:not(:first-child) {
+    margin-left: 12px;
+}

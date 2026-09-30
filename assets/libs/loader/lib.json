@@ -1,0 +1,14 @@
+{
+	"loader/loader.js": {
+		"type": "script",
+		"handle": "loader",
+		"dependencies": [
+			"jquery", "imagesloaded"
+		]
+	},
+	"loader/loader.scss": {
+		"type": "style",
+		"handle": "loader",
+		"dependencies": []
+	}
+}

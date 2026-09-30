@@ -1,0 +1,48 @@
+{
+    "type": "theme",
+    "namespace": "Merakcamacol",
+    "filename": "merak-camacol",
+    "domain": "merak-camacol",
+    "prefix": "mrk",
+    "components": {
+        "settings": [
+            "Site",
+            "SocialNetworks"
+        ],
+        "widgets": [
+            "SocialNetworks"
+        ],
+        "libs": [
+            "addtoany",
+            "bootstrap",
+            "jquery-spinner",
+            "loader",
+            "sliiide",
+            "waypoints"
+        ],
+        "blocks": [
+            "Accordion",
+            "Animation",
+            "Catalog",
+            "FunderData",
+            "FunderRelatedNews",
+            "LatestPosts",
+            "PostsCarousel",
+            "SocialNetworks",
+            "SupplierData",
+            "SupplierRelatedNews",
+            "TwigBlock"
+        ],
+        "structure_metafields": [
+            "Headings"
+        ],
+        "structures": [
+            "Funder",
+            "Supplier"
+        ],
+        "taxonomies": [],
+        "wpjson": [
+            "Sugerencias"
+        ]
+    }
+}

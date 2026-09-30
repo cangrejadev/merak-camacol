@@ -1,0 +1,29 @@
+{#
+	Molecules-Navigation Theme Merak - Menu navigation
+	=========================
+	Description:
+	- This file contains the markup for the theme navigation.
+	- The navigation is used to demonstrate the different text styles.
+#}
+{% if menu %}
+	<ul {% if id %} id="{{id}}" {% endif %} class="navbar__nav nav {{ item.classes | join(' ') }} {{class}}">
+		{% for item in menu %}
+			{% if (item.children)%}
+				<li id="dropdown-item" class="nav__item dropdown {{ item.classes | join(' ') }}">
+					<a id="navbarDropdown" class="nav__link {{ item.classes | join(' ') }}" href="{{ item.link}}" target="{{ item.target }}" alt="{{ item.title }}" target="{{ item.meta('_menu_item_target') == '_blank' ? '_blank' : '_self' }}">{{ item.title }}</a>
+					<span class="arrow nav-toggle-submenu">
+						<i class="fas fa-chevron-right"></i>
+					</span>
+					{% include "molecules/navigation/menu.twig" with {
+						'menu' : item.children,
+						'class': 'navbar__submenu'
+					} %}
+				</li>
+			{% else %}
+				<li class="{{ item.classes | join(' ') }} nav__item">
+					<a class="nav__link" href="{{ item.link }}" alt="{{ item.title }}" target="{{ item.meta('_menu_item_target') == '_blank' ? '_blank' : '_self' }}">{{ item.title }}</a>
+				</li>
+			{% endif %}
+		{% endfor %}
+	</ul>
+{% endif %}

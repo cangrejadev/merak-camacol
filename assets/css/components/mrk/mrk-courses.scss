@@ -1,0 +1,33 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de cursos
+.course {
+	&__item{
+		margin-bottom: 2.625rem;
+		padding: 1rem;
+		border-bottom: 1px solid colors.$color-gray-20;
+		
+		&__title {
+			font-family: vars.$font-body;
+			font-weight: vars.$black;
+			font-size: vars.$font-m;
+			color: colors.$color-black;
+		}
+		&__date {
+			display: block;
+			margin-bottom: .2rem ;
+			color: colors.$color-gray-60;
+		}
+		&__certificate{
+			margin: 1rem 0;
+		}
+		&__certificate__label {
+			margin-left: 1.625rem;
+			color: colors.$color-black !important;
+		}
+	}
+}

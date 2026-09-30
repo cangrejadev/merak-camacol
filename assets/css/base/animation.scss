@@ -1,0 +1,30 @@
+@use "../utilities/mixin";
+@use "../utilities/vars";
+@use "../theme/colors";
+
+
+.animate-fade {
+	@include mixin.transition(opacity, 0.3s, ease-out);
+	background-color: colors.$color-secundary ;
+	color: colors.$color-primary;
+	border-radius: 30px;
+	font-family: vars.$font-title;
+	&:hover {
+		background-color: colors.$color-primary ;
+		color: colors.$color-white;
+	}
+}
+
+.animate-move {
+	background-color: colors.$color-secundary ;
+	color: colors.$color-primary;
+	border-radius: 30px;
+	font-family: vars.$font-title;
+	> .demo-shape {
+		@include mixin.transition(all, 0.8s, ease-in-out);
+	}
+	&:hover {
+		background-color: colors.$color-primary ;
+		color: colors.$color-white;
+	}
+}

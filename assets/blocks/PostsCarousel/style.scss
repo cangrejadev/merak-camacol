@@ -1,0 +1,100 @@
+// // Bases
+.wp-block-exl-postscarousel {
+	// @media #{$small-general} {
+	// 	width: 95%;
+	// }
+	.grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax( 45%, 1fr));
+		// gap: 10px 10px;
+
+		&[data-columns="3"] {
+			grid-template-columns: repeat(auto-fit, minmax( 30%, 1fr));
+		}
+
+		&[data-columns="4"] {
+			grid-template-columns: repeat(auto-fit, minmax( 20%, 1fr));
+		}
+		// @media #{$small-general} {
+		// 	grid-template-columns: repeat(auto-fit, minmax( 100%, 1fr));
+		// }
+	}
+	.grid-item{
+		margin: 0;
+		// @media #{$small-general}  {
+		// 	margin-bottom: 30px;
+		// }
+	}
+	.img-post {
+		position: relative;
+		// @media #{$small-general}{
+		// 	margin: 15px auto;
+		// }
+		.movil{
+			display: none;
+			max-width: 100%;
+			// @media #{$small-general}{
+			// 	display: initial;
+			// }
+		}
+		.desk{
+			// @media #{$small-general}{
+			// 	display: none;
+			// }
+		}
+	}
+	.text-post{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.post-title {
+		display: flex;
+		text-align: left;
+		flex-wrap: wrap;
+		font-size: calc(1.5em + 0.1vw);
+		margin: 0 20px !important;
+		padding: 0px;
+		// a{
+		// 	color: $color-primary !important;
+		// }
+		// @media #{$small-general}{
+		// 	margin: 10px 0px !important;
+		// 	font-size: calc(1.4rem + #{$font-base});
+		// 	line-height: 1.2em;
+		// 	justify-content: start;
+		// }
+	}
+	p{
+		margin: 0 20px !important; 
+		// @media #{$small-general}{
+		// 	margin: 10px 0px !important; 
+		// }
+	}
+	.read-more{
+		margin-top: 20px;
+		padding-right: 30px;
+		box-sizing: border-box;
+		a{
+			// color: $color-primary;
+			// @media #{$small-general}{
+			// 	font-size: calc(1rem + #{$font-base});
+			// 	text-decoration: underline;
+			// }
+			i{
+				// font-size: calc(2rem + #{$font-base});
+				// @media #{$small-general}{
+				// 	font-size: calc(1rem + #{$font-base});
+				// 	margin-left: 5px;
+				// }
+			}
+		}
+		span{
+			display: none;
+
+			// @media #{$small-general}{
+			// 	display: initial;
+			// }
+		}
+	}
+}

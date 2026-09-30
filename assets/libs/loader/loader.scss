@@ -1,0 +1,55 @@
+@use '../../css/theme/colors';
+
+
+@function encodecolor($string) {
+    @if $string == null {
+        @return '';
+    }
+
+    @if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string: unquote('#{$hex}');
+    }
+    $string: '%23' + $string;
+    @return $string;
+}
+
+.loader {
+	background-color: white !important;
+	display: flex;
+	align-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	/* Los siguientes elementos deben ir en el html para que el loader oculte
+	la página antes de cargar los estilos */
+	position: fixed;
+	z-index: 100000;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+
+	.preloader {
+		/* Los siguientes elementos deben ir en el html para que el loader centre
+		la imagen antes de cargar los estilos */
+		height: 350px;
+		width: 350px;
+		margin: auto;
+
+		background-repeat: no-repeat;
+		background-position: center center;
+
+		@media screen and (max-width: 450px) {
+			width: 20vw;
+			height: 20vw;
+			min-width: 300px;
+			min-height: 300px;
+		}
+	}
+}
+
+body.woocommerce > .loader::before {
+	background-image: none;
+}

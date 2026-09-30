@@ -1,0 +1,29 @@
+{#
+	Organism-Blocks MRK  Theme Merak - Teaser Post
+	=========================
+	Description:
+	- Tease Article Component for Post Grid
+	Campos: 
+		Titulo: {{ post.title }}
+		Enlace : {{ post.link }}
+		Fecha: {{ post.date }}
+		Imagen destacada: {{ post.thumbnail|adjust(450,250) }}
+		Extracto: {{ post.preview.length(20).read_more(false) }}
+		Tipo de post: {{post.post_type}}
+		ID: {{post.ID}}
+#}
+<section class="grid-articles">
+	{% for tease in posts %}
+		{% include "organisms/components/tease.twig" with {  'tease': tease } %}
+	{% endfor %}
+</section>
+{# <div class="container">
+ 	{% include "molecules/navigation/pagination.twig" with { query: posts, mid_size: 2 } %}
+</div> #}
+{% set blog = fn('get_page_by_path', 'blog') %}
+{% if blog is not empty %}
+	{% set slug_funder = fn('get_option', 'funder_base', 'funder') %}
+	<div class="wp-block-button">
+		<a href="{{ fn('get_permalink', blog.ID) }}{{ slug_funder }}/{{ post.slug }}" class="wp-block-button__link wp-element-button">Blog</a>
+	</div>
+{% endif %}

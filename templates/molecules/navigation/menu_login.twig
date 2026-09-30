@@ -1,0 +1,39 @@
+{#
+	Molecules-Navigation Theme Merak - Menu navigation
+	=========================
+	Description:
+	- This file contains the markup for the theme navigation.
+	- The navigation is used to demonstrate the different text styles.
+#}
+{# {% if menu_login %} #}
+	<ul class="{% if class %}{{class}}{% else %}navbar__nav navbar__nav__login {% endif %}{{ item.classes | join(' ') }}">
+		<li class="menu-item nav__item">
+			<i class="fas fa-search search-button"></i>
+		</li>
+		{% if fn('get_current_user_id') <= 0 %}
+		<li class="menu-item nav__item">
+			<div class="wp-block-button">
+				<a class="wp-block-button__link wp-element-button" href="{{ fn('wp_registration_url') }}" alt="Registrarse" target="_self">Registrarse</a>
+			</div>
+		</li>
+		<li class="menu-item nav__item">
+			<div class="wp-block-button">
+				{% set dashboard_page = fn('get_permalink', club_maestros.page_dashboard) %}
+				<a class="wp-block-button__link wp-element-button" href="{{ fn('wp_login_url', dashboard_page) }}" alt="Iniciar Sesión" target="_self">Iniciar Sesión</a>
+			</div>
+		</li>
+		{% else %}
+		<li class="menu-item nav__item">
+			<div class="wp-block-button">
+				<a class="wp-block-button__link wp-element-button" href="{{ fn('get_permalink', club_maestros.page_dashboard) }}" alt="Mis Proyectos" target="_self">Mis Proyectos</a>
+			</div>
+		</li>
+		<li class="menu-item nav__item">
+			<div class="wp-block-button">
+				{% set home_url = fn('get_home_url') %}
+				<a class="wp-block-button__link wp-element-button" href="{{ fn('wp_logout_url', home_url) }}" alt="Cerrar Sesión" target="_self">Cerrar Sesión</a>
+			</div>
+		</li>
+		{% endif %}
+	</ul>
+{# {% endif %} #}

@@ -1,0 +1,14 @@
+{
+	"jquery-spinner/jquery.spinner.js": {
+		"type": "script",
+		"handle": "jquery-spinner",
+		"dependencies": [
+			"jquery"
+		]
+	},
+	"jquery-spinner/jquery.spinner.scss": {
+		"type": "style",
+		"handle": "jquery-spinner",
+		"dependencies": []
+	}
+}

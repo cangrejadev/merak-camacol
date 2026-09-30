@@ -1,0 +1,25 @@
+{#
+		Templates MRK Theme Merak - Single Proveedores
+		=========================
+		Description:
+		- Template 
+ 		Campos: 
+#}
+{% extends "templates/layouts/base.twig" %}
+
+{% block content %}
+
+	<article
+		class="maestro single-{{ post.post_type }}" id="post-{{ post.ID }} single-{{ post.post_type }}" role="wall">
+		{# Perfil #}
+		{% include "organisms/blocks-mrk/MRKFunderProfile.twig" %}
+		<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+		<h2 class="wp-block-heading has-text-align-center">Servicios</h2>
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		{% include "organisms/blocks-mrk/MRKCardServicios.twig" %}
+		<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+		<h2 class="wp-block-heading has-text-align-center">Blog</h2>
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		{% include "organisms/blocks-mrk/MRKFunderRelatedNews.twig" with { posts: blog } %}
+	</article>
+{% endblock %}

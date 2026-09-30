@@ -1,0 +1,169 @@
+@use 'sass:math';
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+div[role="wall"], section[role="wall"], article[role="wall"] {
+	& > *,
+	.wp-block-cover__inner-container {
+		max-width: vars.$max-width;
+		width: vars.$width;
+		margin: 0 auto;
+		@media #{responsive.$small-general} {
+			max-width: 80%;
+		}
+		body.single & {
+			padding-bottom: 20px;
+		}
+
+		&.alignwide {
+			max-width: 100%;
+			width: 100%;
+		}
+
+		&.alignfull {
+			max-width: 100%;
+			height: 100vh;
+			width: 100%;
+		}
+
+		&.alignright {
+			display: inline;
+			float: right;
+			margin-left: 10px;
+			text-align: right;
+		}
+
+		&.alignleft {
+			display: inline;
+			float: left;
+			margin-right: 10px;
+		}
+		&.aligncenter {
+			margin: 0 auto;
+		}
+	}
+
+	& > img {
+		display: block;
+	}
+}
+.wrapper, .wp-block-group__inner-container, .wp-block-cover__inner-container {
+	//Se agrega por problemas en las clases adicionales ancho-#
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	overflow: hidden;
+}
+.comment-box {
+	max-width: vars.$max-width;
+	margin: 0 auto;
+}
+
+// Contenedores Flex
+.no-gutters {
+	margin-right: 0;
+	margin-left: 0;
+}
+.no-gutters > .col,
+.no-gutters > [class*="col-"],
+.no-padding {
+	padding-right: 0;
+	padding-left: 0;
+}
+.wp-block-columns{
+	max-width: vars.$max-width;
+	width: vars.$width;
+	margin: 0 auto;
+
+    &.alignwide {
+        max-width: 100%;
+        width: vars.$max-width;
+    }
+
+    &.alignfull {
+        max-width: 100%;
+		grid-template: 47px;
+        height: 100vh;
+        width: 100%;
+    }
+
+    &.alignright {
+        float: right;
+        margin-left: 10px;
+    }
+
+    &.alignleft {
+        float: left;
+        margin-right: 10px;
+    }
+    &.aligncenter {
+        margin: 0 auto;
+    }
+}
+/* Columnas Flex*/
+/* Ciclo que crea de manera dinamica las clases para el ancho de las columnas tipo Bootstrap */
+@for $i from 1 through 12 {
+	.col-#{$i} {
+		$j: math.div(vars.$grid-columns , $i);
+		@include mixin.make-grid-columns ( vars.$size, $j );
+	}
+}
+/* Ciclo que crea las clases para darle un ancho en porcentajes (10)  */
+/*
+* Para darle un porcentaje de ancho a un div o cualquier elemento agregar una de las siguientes
+* en el editor de WordPress
+* ancho-1 : 10%
+* ancho-2 : 20%
+* ancho-3 : 30%
+* ancho-4 : 40%
+* ancho-5 : 50%
+* ancho-6 : 60%
+* ancho-7 : 70%
+* ancho-8 : 80%
+* ancho-9 : 90%
+* ancho-10 : 100%
+*/
+/* Ancho en ecritorio */
+@for $i from 1 through 10 {
+	.ancho-#{$i} {
+		$ancho: $i * 10;
+		@include mixin.make-width-columns ($ancho);
+	}
+}
+
+/* Ancho en moviles */
+@for $i from 1 through 10 {
+	.ancho-mv-#{$i} {
+		@media #{responsive.$small-general} {
+			$ancho: $i * 10;
+			@include mixin.make-width-columns ($ancho);
+		}
+	}
+}
+
+/* Grid CSS */
+.grid {
+	@include mixin.grid(25%, 32%, 10px);
+	@media #{responsive.$small-general}{
+		grid-template-columns: repeat(auto-fit, minmax(20%, 100%));
+		padding: vars.$base-margin * 1  0px;
+	}
+}
+.grid[data-type="list"] {
+	grid-template-columns: repeat(auto-fit, minmax(20%, 100%));
+}
+.container{
+	@include mixin.container(vars.$width, vars.$max-width);
+}
+.col{
+	position: relative;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.row{
+	@include mixin.row;
+}

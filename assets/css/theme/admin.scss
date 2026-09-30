@@ -1,0 +1,33 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+/* Igualar ancho de editor gutenberg al ancho del diseño */
+.editor-post-title,
+.block-editor-block-list__layout {
+	.wp-block.alignfull,
+	.wp-block[data-align="full"],
+	.wp-block[data-align="wide"] {
+		max-width: none;
+		width: 100%;
+		margin: 0 auto !important;
+	}
+	& > .wp-block {
+		width: vars.$max-width;
+		max-width: 90%;
+	}
+}
+
+.block-list-appender {
+	width: 100%;
+	.wp-block {
+		width: vars.$max-width;
+		max-width: 90%;
+	}
+}
+
+.wp-block-column + .block-list-appender {
+	width: initial;
+}

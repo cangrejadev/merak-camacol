@@ -1,0 +1,703 @@
+# Copyright (C) 2014 Juan Sebastián Echeverry
+# This file is distributed under the  GNU General Public License.
+msgid ""
+msgstr ""
+"Project-Id-Version: merak-camacol\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-06 19:08-0500\n"
+"PO-Revision-Date: 2025-10-06 19:08-0500\n"
+"Last-Translator: Juan Sebastián Echeverry <baxtian.echeverry@gmail.com>\n"
+"Language-Team: Alejandra Zerdá Guzmán <aleja533@gmail.com>, Juan Sebastián "
+"Echeverry <baxtian.echeverry@gmail.com>\n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: "
+"__;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: assets\n"
+"X-Poedit-SearchPathExcluded-2: vendor\n"
+
+#. Theme Name of the theme
+#: style.css
+msgid "merak-camacol"
+msgstr "merak-camacol"
+
+#. Description of the theme
+#: style.css
+msgid "Camacol"
+msgstr "Camacol"
+
+#. Author of the theme
+#: style.css
+msgid "Alejandra Zerda <aleja533@gmail.com>"
+msgstr "Alejandra Zerda <aleja533@gmail.com>"
+
+#: archive.php:19 archive.php:21 archive.php:23 archive.php:25
+msgid "Archive"
+msgstr "Archivo"
+
+#. Template Name of the theme
+msgid "Hero heading"
+msgstr "Encabezado tipo Hero"
+
+#. Template Name of the theme
+msgid "Project layout"
+msgstr "Disposición de proyecto"
+
+#: search.php:11
+#, php-format
+msgid "Search results for %s"
+msgstr "Resultados de búsqueda para %s"
+
+#: templates/static/no-timber.php:4
+msgid "Missed requirements"
+msgstr "No se cumplen los requerimientos"
+
+#: templates/static/no-timber.php:8
+msgid "Some requirements are missing."
+msgstr "Hay requerimientos que no se cumplen."
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Page"
+msgstr "Página"
+
+#: theme.json
+msgctxt "Template part name"
+msgid "Post"
+msgstr "Entrada"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Turquoise"
+msgstr "Turquesa"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Green"
+msgstr "Verde"
+
+#: theme.json
+msgctxt "Color name"
+msgid "Gray"
+msgstr "Gris"
+
+#: theme.json
+msgctxt "Font family name"
+msgid "Montserrat"
+msgstr "Montserrat"
+
+#: templates/atoms/loading/loading-icon.twig:10
+msgid "Loading site"
+msgstr "Cargando sitio"
+
+#: templates/molecules/forms/searchButtonInside.twig:10
+#: templates/molecules/forms/searchButtonInside.twig:12
+#: templates/molecules/forms/searchOutsideButton.twig:10
+#: templates/molecules/forms/searchOutsideButton.twig:12
+#: templates/molecules/forms/searchWithoutbutton.twig:10
+#: templates/molecules/forms/searchWithoutbutton.twig:13
+#: templates/molecules/forms/searchWithoutbutton.twig:15
+msgid "Search"
+msgstr "Buscar"
+
+#: templates/organisms/components/tease-maestro_fantasma.twig:27
+#: templates/organisms/components/tease.twig:25
+msgid " and "
+msgstr " y "
+
+#: templates/pages/search.twig:14
+msgid "Showing <span>%d</span> search result for <span>%s</span>"
+msgid_plural ""
+"Showing <span class='type--italic'>%d</span> search results for <span "
+"class='type--italic'>%s</span>"
+msgstr[0] "Mostrando <span>%d</span> resultado para <span>%s</span>"
+msgstr[1] "Mostrando <span>%d</span> resultados para <span>%s</span>"
+
+#: templates/templates/fadesearch.twig:15
+msgid "Search keyword"
+msgstr "Buscar palabra"
+
+#: src/Blocks/Catalog.php:46
+msgid "Catalog"
+msgstr "Catálogo"
+
+#: src/Blocks/FunderData.php:45 src/Blocks/SupplierData.php:45
+msgid "Speciality"
+msgstr "Especialidad"
+
+#: src/Blocks/FunderData.php:59 src/Blocks/SupplierData.php:59
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: src/Blocks/FunderData.php:73 src/Blocks/SupplierData.php:73
+msgid "Whatsapp"
+msgstr "Whatsapp"
+
+#: src/Blocks/FunderData.php:87 src/Blocks/SupplierData.php:87
+msgid "Phone"
+msgstr "Teléfono"
+
+#: src/Blocks/FunderData.php:101 src/Blocks/SupplierData.php:101
+msgid "Address"
+msgstr "Dirección"
+
+#: src/Blocks/FunderData.php:115 src/Blocks/SupplierData.php:115
+msgid "Logo"
+msgstr "Logo"
+
+#: src/Blocks/Services.php:47
+msgid "Services"
+msgstr "Servicios"
+
+#: src/Importers/Funders.php:138
+#, php-format
+msgid "Funders added: %d, Funders updated: %d, Terms added: %d"
+msgstr ""
+"Financiadores agregados: %d, Financiadores actualizados: %d, Términos "
+"agregados: %d"
+
+#: src/Importers/Funders.php:139
+msgid "Import Funders"
+msgstr "Importar Financiadores"
+
+#: src/Importers/Funders.php:140
+msgid "Funders Archive"
+msgstr "Archivo de financiadores"
+
+#: src/Importers/Funders.php:141
+msgid "funders"
+msgstr "financiadores"
+
+#: src/Importers/Funders.php:142
+msgid "Import Funders from a file."
+msgstr "Importar Financiadores de un archivo."
+
+#: src/Importers/Suppliers.php:134
+#, php-format
+msgid "Suppliers added: %d, Suppliers updated: %d, Terms added: %d"
+msgstr ""
+"Proveedores agregados: %d, Proveedores actualizados: %d, Términos agregados: "
+"%d"
+
+#: src/Importers/Suppliers.php:135
+msgid "Import Suppliers"
+msgstr "Importar Proveedores"
+
+#: src/Importers/Suppliers.php:136
+msgid "Suppliers Archive"
+msgstr "Archvo de Proveedores"
+
+#: src/Importers/Suppliers.php:137
+msgid "suppliers"
+msgstr "proveedores"
+
+#: src/Importers/Suppliers.php:138
+msgid "Import Suppliers from a file."
+msgstr "Importar Proveedores de un archivo."
+
+#: src/Init.php:98
+msgid "Main menu "
+msgstr "Menú principal "
+
+#: src/Init.php:104
+msgid "Footer Widgets"
+msgstr "Widgets del pie de página"
+
+#: src/Relationships.php:33 src/Structures/Supplier.php:41
+#: src/Structures/Supplier.php:43
+msgid "Supplier"
+msgstr "Proveedor"
+
+#: src/Relationships.php:46 src/Structures/Funder.php:41
+#: src/Structures/Funder.php:43 src/WpJson/Sugerencias.php:85
+msgid "Funder"
+msgstr "Financiador"
+
+#: src/Settings/Site.php:42
+msgid "Menu layout"
+msgstr "Disposición del menú"
+
+#: src/Settings/Site.php:48
+msgid "Default"
+msgstr "Por defecto"
+
+#: src/Settings/Site.php:49
+msgid "Centered logo"
+msgstr "Logo centrado"
+
+#: src/Settings/Site.php:68
+msgid "Error page"
+msgstr "Página de error"
+
+#: src/Settings/Site.php:72
+msgid "Use this page as 404 page."
+msgstr "Use esta página como página 404."
+
+#: src/Settings/Site.php:91
+msgid "Default image when sharing"
+msgstr "Imagen predeterminada al compartir"
+
+#: src/Settings/Site.php:92
+msgid "Image to display as the default thumbnail when sharing a page."
+msgstr ""
+"Imagen para mostrar como la miniatura predeterminada al compartir una página."
+
+#: src/Settings/Site.php:113
+msgid "Footer text"
+msgstr "Texto del pie de página"
+
+#: src/Settings/Site.php:117
+#, php-format
+msgid ""
+"Text to be displayed at the bottom of the website. Use %d to add the current "
+"year."
+msgstr ""
+"Texto que se mostrará en la parte inferior del sitio web. Utilice %d para "
+"agregar el año actual."
+
+#: src/Settings/SocialNetworks.php:37 src/Widgets/SocialNetworks.php:25
+msgid "Social networks"
+msgstr "Redes sociales"
+
+#: src/Settings/SocialNetworks.php:55
+msgid "Facebook"
+msgstr "Facebook"
+
+#: src/Settings/SocialNetworks.php:59
+msgid "Facebook profile link"
+msgstr "Enlace al perfil de Facebook"
+
+#: src/Settings/SocialNetworks.php:77
+msgid "Twitter"
+msgstr "Twitter"
+
+#: src/Settings/SocialNetworks.php:81
+msgid "Twitter profile link"
+msgstr "Enlace al perfil de Twitter"
+
+#: src/Settings/SocialNetworks.php:99
+msgid "Linkedin"
+msgstr "Linkedin"
+
+#: src/Settings/SocialNetworks.php:103
+msgid "Linkedin profile link"
+msgstr "Enlace al perfil de Linkedin"
+
+#: src/Settings/SocialNetworks.php:121
+msgid "Instagram"
+msgstr "Instagram"
+
+#: src/Settings/SocialNetworks.php:125
+msgid "Instagram profile link"
+msgstr "Enlace al perfil de Instagram"
+
+#: src/Settings/SocialNetworks.php:143
+msgid "YouTube"
+msgstr "YouTube"
+
+#: src/Settings/SocialNetworks.php:147
+msgid "YouTube chanel link"
+msgstr "Enlace al perfil de YouTube"
+
+#: src/Settings/SocialNetworks.php:165
+msgid "Vimeo"
+msgstr "Vimeo"
+
+#: src/Settings/SocialNetworks.php:169
+msgid "Vimeo profile link"
+msgstr "Enlace al perfil de Vimeo"
+
+#: src/Structures/Fields/Cabecera.php:39
+msgid "Heading image"
+msgstr "Imagen de cabecera"
+
+#: src/Structures/Fields/Cabecera.php:43
+msgid "Desktop"
+msgstr "Escritorio"
+
+#: src/Structures/Fields/Cabecera.php:44
+msgid "Replace desktop image"
+msgstr "Reemplazar imagen de escritorio"
+
+#: src/Structures/Fields/Cabecera.php:51
+msgid "Tablet"
+msgstr "Tableta"
+
+#: src/Structures/Fields/Cabecera.php:52
+msgid "Replace tablet image"
+msgstr "Reemplazar imagen de tableta"
+
+#: src/Structures/Fields/Cabecera.php:59
+msgid "Mobile"
+msgstr "En dispositivos móviles"
+
+#: src/Structures/Fields/Cabecera.php:60
+msgid "Replace mobile image"
+msgstr "Reemplazar imagen de celular"
+
+#: src/Structures/Funder.php:40 src/Structures/Funder.php:42
+#: src/Structures/Funder.php:49
+msgid "Funders"
+msgstr "Financiadores"
+
+#: src/Structures/Funder.php:44
+msgctxt "Add new funder"
+msgid "Add new"
+msgstr "Agregar nuevo"
+
+#: src/Structures/Funder.php:45
+msgid "Add new funder"
+msgstr "Agregar nuevo financiador"
+
+#: src/Structures/Funder.php:46
+msgid "New funder"
+msgstr "Nuevo financiador"
+
+#: src/Structures/Funder.php:47
+msgid "Edit funder"
+msgstr "Editar financiador"
+
+#: src/Structures/Funder.php:48
+msgid "View funder"
+msgstr "Ver financiador"
+
+#: src/Structures/Funder.php:50
+msgid "Search funder"
+msgstr "Buscar financiador"
+
+#: src/Structures/Funder.php:51
+msgid "Parent funder:"
+msgstr "Financiador padre:"
+
+#: src/Structures/Funder.php:52
+msgid "No funders found."
+msgstr "No se encontraron financiadores."
+
+#: src/Structures/Funder.php:53
+msgid "No funders found in Trash."
+msgstr "No se encontraron financiadores en la papelera."
+
+#: src/Structures/Funder.php:54
+msgid "Funder base"
+msgstr "Basa para financiador"
+
+#: src/Structures/Supplier.php:40 src/Structures/Supplier.php:42
+#: src/Structures/Supplier.php:49
+msgid "Suppliers"
+msgstr "Proveedores"
+
+#: src/Structures/Supplier.php:44
+msgctxt "Add new supplier"
+msgid "Add new"
+msgstr "Agregar nuevo"
+
+#: src/Structures/Supplier.php:45
+msgid "Add new supplier"
+msgstr "Agregar nuevo proveedor"
+
+#: src/Structures/Supplier.php:46
+msgid "New supplier"
+msgstr "Nuevo proveedor"
+
+#: src/Structures/Supplier.php:47
+msgid "Edit supplier"
+msgstr "Editar proveedor"
+
+#: src/Structures/Supplier.php:48
+msgid "View supplier"
+msgstr "Ver proveedores"
+
+#: src/Structures/Supplier.php:50
+msgid "Search supplier"
+msgstr "Proveedor padre"
+
+#: src/Structures/Supplier.php:51
+msgid "Parent supplier:"
+msgstr "Proveedor padre:"
+
+#: src/Structures/Supplier.php:52
+msgid "No suppliers found."
+msgstr "No se encontraron proveedores."
+
+#: src/Structures/Supplier.php:53
+msgid "No suppliers found in Trash."
+msgstr "No se encontraron proveedores en el basurero."
+
+#: src/Structures/Supplier.php:54
+msgid "Supplier base"
+msgstr "Base de proveedor"
+
+#: src/Widgets/SocialNetworks.php:26
+msgid "Display list of social networks"
+msgstr "Mostrar la lista de redes sociales"
+
+#: src/Widgets/SocialNetworks.php:62
+msgid "Title:"
+msgstr "Título:"
+
+#: src/WpJson/Sugerencias.php:84
+msgid "Provider"
+msgstr "Proveedor"
+
+#: src/WpJson/Sugerencias.php:86
+msgid "Page"
+msgstr "Página"
+
+#: src/WpJson/Sugerencias.php:90
+msgctxt "tag delimiter"
+msgid ","
+msgstr ","
+
+#: src/WpJson/Sugerencias.php:272
+msgid "The parameter was not Boolean."
+msgstr "El parámetro no era booleano."
+
+#~ msgid "Accordion"
+#~ msgstr "Acordeón"
+
+#~ msgid "Commuter"
+#~ msgstr "Conmutador"
+
+#~ msgid "Add accordion"
+#~ msgstr "Agregar acordeón"
+
+#~ msgid "Start unfolded"
+#~ msgstr "Iniciar desplegado"
+
+#~ msgid "Title"
+#~ msgstr "Título"
+
+#~ msgid "Subtitle"
+#~ msgstr "Subtítulo"
+
+#~ msgid "Accordions"
+#~ msgstr "Acordeones"
+
+#~ msgid "Group"
+#~ msgstr "Grupo"
+
+#~ msgid "Keep only one accordion open"
+#~ msgstr "Mantener un único acordeón abierto"
+
+#~ msgid "Zoom Effect"
+#~ msgstr "Efecto de Zoom"
+
+#~ msgid "Animation"
+#~ msgstr "Animación"
+
+#~ msgid "Effect"
+#~ msgstr "Efecto"
+
+#~ msgid "None"
+#~ msgstr "Ninguno"
+
+#~ msgid "From left to right"
+#~ msgstr "De izquierda a derecha"
+
+#~ msgid "From right to left"
+#~ msgstr "De derecha a izquierda"
+
+#~ msgid "From bottom to top"
+#~ msgstr "De abajo hacia arriba"
+
+#~ msgid "Zoom in"
+#~ msgstr "Acercar"
+
+#~ msgid "Delay"
+#~ msgstr "Retraso"
+
+#~ msgid "Link"
+#~ msgstr "Enlace"
+
+#~ msgid "Add Item"
+#~ msgstr "Agregar Item"
+
+#~ msgid "list"
+#~ msgstr "lista"
+
+#~ msgid "products"
+#~ msgstr "productos"
+
+#~ msgid "Funder Data"
+#~ msgstr "Datos del financiador"
+
+#~ msgid "supplier"
+#~ msgstr "proveedor"
+
+#~ msgid "info"
+#~ msgstr "información"
+
+#~ msgid "Set logo"
+#~ msgstr "Establecer el logo"
+
+#~ msgid "Remove logo"
+#~ msgstr "Retirar logo"
+
+#~ msgid "Specialty"
+#~ msgstr "Especialidad"
+
+#~ msgid "Funder Related News"
+#~ msgstr "Noticias relacionadas al fuinanciador"
+
+#~ msgid "News"
+#~ msgstr "Noticias"
+
+#~ msgid "Related"
+#~ msgstr "Relacionadas"
+
+#~ msgid "Related news"
+#~ msgstr "Noticias relacionadas"
+
+#~ msgid "Latest posts"
+#~ msgstr "Últimas entradas"
+
+#~ msgid "posts"
+#~ msgstr "entradas"
+
+#~ msgid "news"
+#~ msgstr "noticias"
+
+#~ msgid "grid"
+#~ msgstr "cuadrícula"
+
+#~ msgid "Category slider"
+#~ msgstr "Categoría del slider"
+
+#~ msgid "Columns"
+#~ msgstr "Columnas"
+
+#~ msgid "Cards with latest posts."
+#~ msgstr "Tarjetas con últimas entradas."
+
+#~ msgid "Posts carousel"
+#~ msgstr "Carrusel de entradas"
+
+#~ msgid "matrix"
+#~ msgstr "matriz"
+
+#~ msgid "slider"
+#~ msgstr "pasarela"
+
+#~ msgid "Autoplay"
+#~ msgstr "Reproducir automáticamente"
+
+#~ msgid "Display arrows"
+#~ msgstr "Mostrar flechas"
+
+#~ msgid "Display dots"
+#~ msgstr "Mostrar puntos"
+
+#~ msgid "Posts Carousel"
+#~ msgstr "Carrusel de Entradas"
+
+#~ msgid "Add Slide"
+#~ msgstr "Agregar diapositiva"
+
+#~ msgid "Select..."
+#~ msgstr "Seleccionar..."
+
+#~ msgid "Move up"
+#~ msgstr "Mover arriba"
+
+#~ msgid "Move down"
+#~ msgstr "Mover abajo"
+
+#~ msgid "Remove slide"
+#~ msgstr "Eliminar  diapositiva"
+
+#~ msgid "Text"
+#~ msgstr "Texto"
+
+#~ msgid "Social Networks"
+#~ msgstr "Redes Sociales"
+
+#~ msgid "Social"
+#~ msgstr "Social"
+
+#~ msgid "Network"
+#~ msgstr "Red"
+
+#~ msgid "Supplier Data"
+#~ msgstr "Datos del Proveedor"
+
+#~ msgid "Supplier-related news"
+#~ msgstr "Noticias relacionadas con el proveedor"
+
+#~ msgid "Twig Block"
+#~ msgstr "Bloque Twig"
+
+#~ msgid "Twig"
+#~ msgstr "Twig"
+
+#~ msgid "Format"
+#~ msgstr "Formato"
+
+#~ msgid "Label"
+#~ msgstr "Etiqueta"
+
+#~ msgid "Preview"
+#~ msgstr "Vista previa"
+
+#~ msgid "Twig code"
+#~ msgstr "Código Twig"
+
+#~ msgid "Write here the twig code"
+#~ msgstr "Escriba acá el código twig"
+
+#, php-format
+#~ msgid "Services added: %d, Services updated: %d, Terms added: %d"
+#~ msgstr ""
+#~ "Nuevos servicios: %d, Servicios modificados: %d, Nuevos términos: %d"
+
+#~ msgid "Import Services"
+#~ msgstr "Importar Servicios"
+
+#~ msgid "Services Archive"
+#~ msgstr "Archivo de Servicios"
+
+#~ msgid "services"
+#~ msgstr "servicios"
+
+#~ msgid "Import Services from a file."
+#~ msgstr "Importar Servicios de un archivo."
+
+#~ msgid "Lines"
+#~ msgstr "Líneas"
+
+#~ msgid "Line"
+#~ msgstr "Línea"
+
+#~ msgid "Search lines"
+#~ msgstr "Buscar líneas"
+
+#~ msgid "All lines"
+#~ msgstr "Todas las líneas"
+
+#~ msgid "Parent line"
+#~ msgstr "Línea padre"
+
+#~ msgid "Parent line:"
+#~ msgstr "Línea padre:"
+
+#~ msgid "Edit line"
+#~ msgstr "Editar línea"
+
+#~ msgid "Update line"
+#~ msgstr "Actualizar línea"
+
+#~ msgid "Add new line"
+#~ msgstr "Agregar nueva línea"
+
+#~ msgid "New line name"
+#~ msgstr "Nombre de nueva línea"
+
+#~ msgid "Line base"
+#~ msgstr "Base de línea"

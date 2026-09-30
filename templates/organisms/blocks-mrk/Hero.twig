@@ -1,0 +1,43 @@
+{#
+	Molecules-Block Theme Merak Hero
+	=========================
+	Description: Block to display the featured header or tablet image of a post
+	Use: It will be used for the contact page and forms
+	Campos: 
+	Imagen Desktop :	{{ img.hero_desktop }}
+	Imagen Tablet :	{{ img.tablet }}
+	Imagen Movile :	{{ img.hero_thumbnail }} Es el mismo thumbnail de WP
+#}
+
+<div class="hero hero--desktop alignwide" id="post-{{ post.ID }}">
+	{% if post.heading_desktop is empty %}
+		<section class="hero__img" style="background-image: url('{{ post.heading_desktop }}')">
+		{% else %}
+			{% set image = get_image(post.heading_desktop) %}
+			<section class="hero__img" style="background-image: url('{{ image.src }}')">
+			{% endif %}
+			<div class="hero__background-filter"></div>
+		</section>
+	</div>
+
+	<div class="hero hero--tablet" id="post-{{ post.ID }}">
+		{% if post.heading_tablet is empty %}
+			<section class="hero__img" style="background-image: url('{{ post.heading_tablet }}')">
+			{% else %}
+				{% set image = get_image(post.heading_tablet) %}
+				<section class="hero__img " style="background-image: url('{{ img.src }}')">
+				{% endif %}
+				<div class="hero__background-filter"></div>
+			</section>
+		</div>
+
+		<div class="hero hero--movil" id="post-{{ post.ID }}">
+			{% if post.heading_mobile is empty %}
+			<section class="hero__img" style="background-image: url('{{ post.heading_mobile }}')">
+			{% else %}
+				{% set image = get_image(post.heading_mobile) %}
+				<section class="hero__img " style="background-image: url('{{ img.src }}')">
+				{% endif %}
+				<div class="hero__background-filter"></div>
+			</section>
+		</div>

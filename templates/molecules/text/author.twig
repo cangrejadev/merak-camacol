@@ -1,0 +1,16 @@
+{#
+	Molecules-text WP - Block Author
+	=========================
+	Description:
+		- Author block for displaying the author's name and avatar.
+		- This is a molecule component that can be used in various patterns.
+#}
+<div class="wp-block-post-author">
+	<div class="wp-block-post-author__avatar">
+  	<img alt="" src="{{ author.avatar }}" class="avatar avatar-48 photo" height="48" width="48" loading="lazy" decoding="async">
+	</div>
+	<div class="wp-block-post-author__content">
+		<p class="wp-block-post-author__byline">{{ author.name }}</p>
+		<p class="wp-block-post-author__name">{{ author.description }}</p>
+	</div>
+</div>

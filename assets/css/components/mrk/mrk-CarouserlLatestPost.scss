@@ -1,0 +1,18 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+.carousel--latest-posts{
+	.owl-stage-outer {
+		margin: 0 1.5rem;
+	}
+	.owl-item{
+	}
+	.owl-dot {
+		span {
+			background: rgba($color: colors.$color-primary, $alpha: 1.0)
+		}
+	}
+}

@@ -1,0 +1,109 @@
+@use 'sass:math';
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/function";
+
+@mixin background{
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+@mixin background-parallax{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+// Botones
+@mixin button ($radius, $background-color, $border-size, $border-color , $font-size, $color){
+    border-radius: $radius;
+    border-color: $border-color;
+    background-color: $background-color;
+    font-size: $font-size;
+    color: $color;
+    @media #{responsive.$x-large-only} { font-size: calc( #{$font-size} + .3em);}
+}
+
+// Filtros de fondo (main)
+@mixin filter ($one-color,$porce-one, $two-color,$porce-two, $three-color,$porce-three){
+    background-color: $one-color;
+    background: -moz-linear-gradient(top, $one-color $porce-one, $two-color $porce-one, $three-color $porce-three);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $one-color), color-stop($porce-two, $two-color), color-stop($porce-three, $three-color));
+    background: -webkit-linear-gradient(top, $one-color $porce-one, $two-color $porce-two, $three-color $porce-three);
+    background: -o-linear-gradient(top, $one-color $porce-one,  $two-color $porce-two, $three-color $porce-three);
+    background: -ms-linear-gradient(top, $one-color $porce-one,  $two-color $porce-two, $three-color $porce-three);
+    background: linear-gradient(to bottom, $one-color $porce-one,  $two-color $porce-two, $three-color $porce-three);
+}
+
+
+// Flexbox
+@mixin container( $ancho-min, $ancho-max){
+	max-width: $ancho-max;
+	width: $ancho-min;
+	margin-right: auto;
+	margin-left: auto;
+	@media #{responsive.$small-general} { 
+		margin: 0 auto;
+		max-width: $ancho-max;
+		width: $ancho-min;
+	}
+}
+@mixin container-fluid{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	box-sizing: border-box;
+}
+@mixin row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; 
+}
+@mixin d-flex{
+	display: -ms-flexbox !important;
+	display: flex !important;
+}
+// Columnas Flex
+@mixin make-grid-columns( $size, $grid-columns ){
+	-ms-flex: 0 0 math.percentage(math.div($size, $grid-columns));
+	flex: 0 0 math.percentage(math.div($size, $grid-columns));
+    max-width: math.percentage(math.div($size, $grid-columns));
+    @media #{responsive.$small-general}{
+        -ms-flex: 0 0 100% !important;
+        flex: 0 0 100% !important;
+        max-width: 100%!important;
+    }
+}
+
+@mixin make-width-columns( $ancho ){
+	-ms-flex: 0 0 math.percentage(math.div($ancho, 100)) !important;
+	flex: 0 0 math.percentage(math.div($ancho, 100)) !important;
+    // margin: 0 auto;
+}
+
+@mixin width( $ancho ){
+    width: math.percentage(math.div($ancho, 100)) !important;
+    margin: 0 auto;
+}
+// Grid 
+@mixin grid ($min, $max, $gap){
+  display: grid;
+	grid-template-columns: repeat(auto-fit, minmax($min, $max));
+	gap: $gap;
+}
+
+// Animations 
+/* CSS Transition
+	Usage: @include transition(width,0.3s,ease-out);
+ */
+ @mixin transition($transition-property, $transition-time, $method) {
+	-webkit-transition: $transition-property $transition-time $method;
+	-moz-transition: $transition-property $transition-time $method;
+	-ms-transition: $transition-property $transition-time $method;
+	-o-transition: $transition-property $transition-time $method;
+	transition: $transition-property $transition-time $method;
+}

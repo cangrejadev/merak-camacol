@@ -1,0 +1,401 @@
+# Copyright (C) 2014 Juan Sebastián Echeverry
+# This file is distributed under the  GNU General Public License.
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: merak-camacol\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-10-06 19:08-0500\n"
+"PO-Revision-Date: 2014-10-09 21:36-0500\n"
+"Last-Translator: Alejandra Zerda <aleja533@gmail.com>\n"
+"Language-Team: Alejandra Zerda <aleja533@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-KeywordsList: __;_e;_x:1,2c;_ex:1,2c;_n:1,2;_nx:1,2,4c;_n_noop:1,2;_nx_noop:1,2,3c;esc_attr__;esc_html__;esc_attr_e;esc_html_e;esc_attr_x:1,2c;esc_html_x:1,2c\n"
+"X-Poedit-Basepath: ..\n"
+"X-Generator: Poedit 3.6\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: assets\n"
+"X-Poedit-SearchPathExcluded-2: vendor\n"
+"X-Poedit-SearchPathExcluded-3: languages\n"
+
+#: templates/atoms/loading/loading-icon.twig:10
+msgid "Loading site"
+msgstr ""
+
+#: templates/molecules/forms/searchButtonInside.twig:10
+#: templates/molecules/forms/searchButtonInside.twig:12
+#: templates/molecules/forms/searchOutsideButton.twig:10
+#: templates/molecules/forms/searchOutsideButton.twig:12
+#: templates/molecules/forms/searchWithoutbutton.twig:10
+#: templates/molecules/forms/searchWithoutbutton.twig:13
+#: templates/molecules/forms/searchWithoutbutton.twig:15
+msgid "Search"
+msgstr ""
+
+#: templates/organisms/components/tease-maestro_fantasma.twig:27
+#: templates/organisms/components/tease.twig:25
+msgid " and "
+msgstr ""
+
+#: templates/pages/search.twig:14
+msgid "Showing <span>%d</span> search result for <span>%s</span>"
+msgid_plural "Showing <span class='type--italic'>%d</span> search results for <span class='type--italic'>%s</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: templates/templates/fadesearch.twig:15
+msgid "Search keyword"
+msgstr ""
+
+#: archive.php:19 archive.php:21 archive.php:23 archive.php:25
+msgid "Archive"
+msgstr ""
+
+#: search.php:11
+#, php-format
+msgid "Search results for %s"
+msgstr ""
+
+#: src/Blocks/Catalog.php:46
+msgid "Catalog"
+msgstr ""
+
+#: src/Blocks/FunderData.php:45 src/Blocks/SupplierData.php:45
+msgid "Speciality"
+msgstr ""
+
+#: src/Blocks/FunderData.php:59 src/Blocks/SupplierData.php:59
+msgid "Email"
+msgstr ""
+
+#: src/Blocks/FunderData.php:73 src/Blocks/SupplierData.php:73
+msgid "Whatsapp"
+msgstr ""
+
+#: src/Blocks/FunderData.php:87 src/Blocks/SupplierData.php:87
+msgid "Phone"
+msgstr ""
+
+#: src/Blocks/FunderData.php:101 src/Blocks/SupplierData.php:101
+msgid "Address"
+msgstr ""
+
+#: src/Blocks/FunderData.php:115 src/Blocks/SupplierData.php:115
+msgid "Logo"
+msgstr ""
+
+#: src/Blocks/Services.php:47
+msgid "Services"
+msgstr ""
+
+#: src/Importers/Funders.php:138
+#, php-format
+msgid "Funders added: %d, Funders updated: %d, Terms added: %d"
+msgstr ""
+
+#: src/Importers/Funders.php:139
+msgid "Import Funders"
+msgstr ""
+
+#: src/Importers/Funders.php:140
+msgid "Funders Archive"
+msgstr ""
+
+#: src/Importers/Funders.php:141
+msgid "funders"
+msgstr ""
+
+#: src/Importers/Funders.php:142
+msgid "Import Funders from a file."
+msgstr ""
+
+#: src/Importers/Suppliers.php:134
+#, php-format
+msgid "Suppliers added: %d, Suppliers updated: %d, Terms added: %d"
+msgstr ""
+
+#: src/Importers/Suppliers.php:135
+msgid "Import Suppliers"
+msgstr ""
+
+#: src/Importers/Suppliers.php:136
+msgid "Suppliers Archive"
+msgstr ""
+
+#: src/Importers/Suppliers.php:137
+msgid "suppliers"
+msgstr ""
+
+#: src/Importers/Suppliers.php:138
+msgid "Import Suppliers from a file."
+msgstr ""
+
+#: src/Init.php:59
+msgid "Camacol"
+msgstr ""
+
+#: src/Init.php:98
+msgid "Main menu "
+msgstr ""
+
+#: src/Init.php:104
+msgid "Footer Widgets"
+msgstr ""
+
+#: src/Relationships.php:33 src/Structures/Supplier.php:41
+#: src/Structures/Supplier.php:43
+msgid "Supplier"
+msgstr ""
+
+#: src/Relationships.php:46 src/Structures/Funder.php:41
+#: src/Structures/Funder.php:43 src/WpJson/Sugerencias.php:85
+msgid "Funder"
+msgstr ""
+
+#: src/Settings/Site.php:42
+msgid "Menu layout"
+msgstr ""
+
+#: src/Settings/Site.php:48
+msgid "Default"
+msgstr ""
+
+#: src/Settings/Site.php:49
+msgid "Centered logo"
+msgstr ""
+
+#: src/Settings/Site.php:68
+msgid "Error page"
+msgstr ""
+
+#: src/Settings/Site.php:72
+msgid "Use this page as 404 page."
+msgstr ""
+
+#: src/Settings/Site.php:91
+msgid "Default image when sharing"
+msgstr ""
+
+#: src/Settings/Site.php:92
+msgid "Image to display as the default thumbnail when sharing a page."
+msgstr ""
+
+#: src/Settings/Site.php:113
+msgid "Footer text"
+msgstr ""
+
+#: src/Settings/Site.php:117
+#, php-format
+msgid "Text to be displayed at the bottom of the website. Use %d to add the current year."
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:37 src/Widgets/SocialNetworks.php:25
+msgid "Social networks"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:55
+msgid "Facebook"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:59
+msgid "Facebook profile link"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:77
+msgid "Twitter"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:81
+msgid "Twitter profile link"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:99
+msgid "Linkedin"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:103
+msgid "Linkedin profile link"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:121
+msgid "Instagram"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:125
+msgid "Instagram profile link"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:143
+msgid "YouTube"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:147
+msgid "YouTube chanel link"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:165
+msgid "Vimeo"
+msgstr ""
+
+#: src/Settings/SocialNetworks.php:169
+msgid "Vimeo profile link"
+msgstr ""
+
+#: src/Structures/Fields/Cabecera.php:39
+msgid "Heading image"
+msgstr ""
+
+#: src/Structures/Fields/Cabecera.php:43
+msgid "Desktop"
+msgstr ""
+
+#: src/Structures/Fields/Cabecera.php:44
+msgid "Replace desktop image"
+msgstr ""
+
+#: src/Structures/Fields/Cabecera.php:51
+msgid "Tablet"
+msgstr ""
+
+#: src/Structures/Fields/Cabecera.php:52
+msgid "Replace tablet image"
+msgstr ""
+
+#: src/Structures/Fields/Cabecera.php:59
+msgid "Mobile"
+msgstr ""
+
+#: src/Structures/Fields/Cabecera.php:60
+msgid "Replace mobile image"
+msgstr ""
+
+#: src/Structures/Funder.php:40 src/Structures/Funder.php:42
+#: src/Structures/Funder.php:49
+msgid "Funders"
+msgstr ""
+
+#: src/Structures/Funder.php:44
+msgctxt "Add new funder"
+msgid "Add new"
+msgstr ""
+
+#: src/Structures/Funder.php:45
+msgid "Add new funder"
+msgstr ""
+
+#: src/Structures/Funder.php:46
+msgid "New funder"
+msgstr ""
+
+#: src/Structures/Funder.php:47
+msgid "Edit funder"
+msgstr ""
+
+#: src/Structures/Funder.php:48
+msgid "View funder"
+msgstr ""
+
+#: src/Structures/Funder.php:50
+msgid "Search funder"
+msgstr ""
+
+#: src/Structures/Funder.php:51
+msgid "Parent funder:"
+msgstr ""
+
+#: src/Structures/Funder.php:52
+msgid "No funders found."
+msgstr ""
+
+#: src/Structures/Funder.php:53
+msgid "No funders found in Trash."
+msgstr ""
+
+#: src/Structures/Funder.php:54
+msgid "Funder base"
+msgstr ""
+
+#: src/Structures/Supplier.php:40 src/Structures/Supplier.php:42
+#: src/Structures/Supplier.php:49
+msgid "Suppliers"
+msgstr ""
+
+#: src/Structures/Supplier.php:44
+msgctxt "Add new supplier"
+msgid "Add new"
+msgstr ""
+
+#: src/Structures/Supplier.php:45
+msgid "Add new supplier"
+msgstr ""
+
+#: src/Structures/Supplier.php:46
+msgid "New supplier"
+msgstr ""
+
+#: src/Structures/Supplier.php:47
+msgid "Edit supplier"
+msgstr ""
+
+#: src/Structures/Supplier.php:48
+msgid "View supplier"
+msgstr ""
+
+#: src/Structures/Supplier.php:50
+msgid "Search supplier"
+msgstr ""
+
+#: src/Structures/Supplier.php:51
+msgid "Parent supplier:"
+msgstr ""
+
+#: src/Structures/Supplier.php:52
+msgid "No suppliers found."
+msgstr ""
+
+#: src/Structures/Supplier.php:53
+msgid "No suppliers found in Trash."
+msgstr ""
+
+#: src/Structures/Supplier.php:54
+msgid "Supplier base"
+msgstr ""
+
+#: src/Widgets/SocialNetworks.php:26
+msgid "Display list of social networks"
+msgstr ""
+
+#: src/Widgets/SocialNetworks.php:62
+msgid "Title:"
+msgstr ""
+
+#: src/WpJson/Sugerencias.php:84
+msgid "Provider"
+msgstr ""
+
+#: src/WpJson/Sugerencias.php:86
+msgid "Page"
+msgstr ""
+
+#: src/WpJson/Sugerencias.php:90
+msgctxt "tag delimiter"
+msgid ","
+msgstr ""
+
+#: src/WpJson/Sugerencias.php:272
+msgid "The parameter was not Boolean."
+msgstr ""
+
+#: templates/static/no-timber.php:4
+msgid "Missed requirements"
+msgstr ""
+
+#: templates/static/no-timber.php:8
+msgid "Some requirements are missing."
+msgstr ""

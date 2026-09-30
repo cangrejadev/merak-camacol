@@ -1,0 +1,23 @@
+{#
+	Organism-Blocks MRK Theme Merak - Card course 
+	=========================
+	Description:
+	- Block for Courses
+	Campos: 
+
+#}
+<div class="course">
+{% for item in course %}
+	<div class="course__item">
+		<h3 class="course__item__title">{{ item.title }}</h3>
+		<span class="course__item__date">{{ item.date }}</span>
+		<div class="course__item__certificate">
+			<a <a href="{{ item.document.link }}" class="course__item__link" download>
+				<i class="fa-solid fa-file"></i>
+				<span class="course__item__certificate__label">{{ item.document }}</span>
+			</a>
+		</div>
+	</div>
+{% endfor %}
+</div>
+

@@ -1,0 +1,44 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+// Componente para compartir en redes sociales Addtoany
+.social-share-title {
+    margin-bottom: 1rem !important;
+    font-size: vars.$font-l;
+    color: colors.$color-black;
+}
+.a2a_kit {
+    margin-bottom: 1.5rem !important;
+    justify-content: start;
+    position: relative;
+    @include mixin.d-flex;
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: 65%;
+        bottom: -2rem;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: colors.$color-black;
+    }
+    .a2a_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        margin: 0 0.25rem;
+        padding: 4px;
+        border-radius: 64px;
+        background-color: #EEEEEE;
+
+        i {
+            color: colors.$color-black;
+        }
+    }
+}

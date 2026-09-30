@@ -1,0 +1,33 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+.archive,
+.blog {
+	.container-index {
+		align-items: center;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	}
+	.row {
+		justify-content: flex-start;
+
+		.img-banner {
+			margin: calc(#{vars.$base-margin} * 3) 0px;
+			height: auto;
+			img {
+				width: auto !important;
+			}
+		}
+	}
+	.grid-posts {
+		padding: calc(#{vars.$base-margin} * 3) 0px;
+		grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+	}
+}
+

@@ -1,0 +1,36 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque Listas WordPress
+
+ul, ol{
+    padding-left: 0.5rem;
+}
+li {
+    list-style-position: inside;
+    color: colors.$color-gray-90;
+	margin-bottom: 0.3rem;
+
+    &::marker {
+        color: colors.$color-secundary;
+        font-size: 1rem;
+        font-weight: vars.$bold;
+    }
+}
+
+/* Definition Lists */
+dl {
+	overflow: hidden;
+	margin: 0 0 1em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin-left: 0;
+}

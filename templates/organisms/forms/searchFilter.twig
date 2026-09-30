@@ -1,0 +1,13 @@
+{#
+	Molecules-Form WP - Block Search Filter
+	=========================
+	Description:
+	- This file contains the markup for the Wordpress block search.
+	- The search form is used to demonstrate the different text styles.
+	- The search form is used to search for content on the site.
+#}
+<form role="search" method="get" action="{{ site.link }}{{ url }}" class="search-content__form">
+	{% include "molecules/forms/searchWithoutbutton.twig" with { 'classes': 'col-12 form__group' } %}
+	<input type="submit" class="wp-block-search__button wp-element-button" value="Buscar"></input>
+</form>
+

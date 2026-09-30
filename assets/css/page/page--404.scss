@@ -1,0 +1,48 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48vh;
+    text-align: center;
+ 
+    .error-content {
+      max-width: 600px;
+    }
+  
+    .error-icon {
+      font-size: 40px;
+      color: colors.$color-primary;
+      margin-bottom: 10px;
+    }  
+    .error-code {
+      font-size: 60px;
+      color: colors.$color-primary;
+      margin-bottom: 10px;
+    }
+  
+    .error-title {
+      font-size: 24px;
+      color: colors.$color-gray-100;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+  
+    .error-description {
+      font-size: 15px;
+      color: colors.$color-gray-90;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+  
+    .error-button {
+
+    }
+  }
+  

@@ -1,0 +1,30 @@
+{#
+	Molecules-Navigation Theme Merak - Mobile Menu
+	=========================
+	Description:
+	- Navigation bar with 1 menu, logo on the left side.
+	- This file contains the markup for the main navigation.
+	- The main navigation is used to demonstrate the different text styles.
+	- The main navigation is used to navigate the site.
+#}
+<nav
+	class="navbar navbar--mobile">
+	{# Logo - Brand #}
+	<div class="navbar__brand">
+		{{fn('get_custom_logo')}}
+	</div>
+	<div id="navbar__toogle" class="navbar__toogle">
+		<button></button>
+	</div>
+</nav>
+<div id="menu" class="navbar__menu navbar--menu-mobile justify-content-start" role="navigation">
+	{% if use_child_menu %}
+		{% include "molecules/navigation/child-menu.twig" with {
+				'items' : post.children('parent'),
+			} %}
+	{% else %}
+		{% include "molecules/navigation/menu.twig" with {
+				'menu' : menu_principal.get_items,
+			} %}
+	{% endif %}
+</div>

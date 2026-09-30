@@ -1,0 +1,45 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de Card
+.card {
+	border-radius: 30px 30px 20px 20px;
+	overflow: hidden;
+	
+	&__post{
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		height: 280px;
+		@include mixin.background;
+	}
+	&__title {
+		display: block;
+		padding: 10px 21px;
+		font-size: calc(vars.$font-xl - 4px);
+		color: colors.$color-white;
+		backdrop-filter: brightness(80%);
+	}
+	&__link {
+		width: 100%;
+		display: block !important; 
+		margin-right: 0 !important;
+		text-align: right;
+		line-height: 2.5rem;
+		padding-right: 20px;
+		// border-radius: 0 0 20px !important;
+
+		a ,i {
+			color: colors.$color-black !important;
+		}
+		&:hover {
+			a ,i {
+				color: colors.$color-white !important;
+			}
+		}
+
+	}
+}

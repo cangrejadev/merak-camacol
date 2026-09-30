@@ -1,0 +1,14 @@
+/node_modules
+/vendor
+/build
+/.vscode
+composer.lock
+package-lock.json
+.DS_Store
+readme.txt
+
+# No agregue archivos comprimidos
+*.zip
+
+# No agregar la carpeta de cache sass
+/.sass-cache

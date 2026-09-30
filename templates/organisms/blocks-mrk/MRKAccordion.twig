@@ -1,0 +1,29 @@
+{#
+	Organism-Blocks MRK Accordion
+	=========================
+	Description:
+	- This block is used to create an accordion component.
+	Campos: 
+		Título: {{ title }}
+		SubTítulo: {{ subtitle }}
+		Contenido : {{ inner_content }}
+#}
+{% set rand = random(10000, 99999) %}
+
+	<div data-id="acordion-{{rand}}" data-unfolded="{% if unfolded %}true{% else %}false{% endif %}" class="accordion accordion-{{rand}}">
+		<div class="accordion__header">
+			<h3 class="accordion__title">
+				{{ title }}
+				<i class="fa-solid fa-plus"></i>
+				<i class="fa-solid fa-minus"></i>
+			</h3>
+			{% if subtitle is not empty %}
+				<span class="accordion__subtitle">
+					{{ subtitle }}
+				</span>
+			{% endif %}
+		</div>
+		<div data-id="acordion-{{rand}}" class="accordion__content">
+			{{ inner_content }}
+		</div>
+	</div>

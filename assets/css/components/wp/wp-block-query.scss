@@ -1,0 +1,75 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque del Lista de estrallas (Parrilla)
+.wp-block-query {
+    .is-flex-container {
+        .wp-block-post {
+            display: flex;
+            align-content: start;
+            flex-flow: row wrap;
+            position: relative;
+
+            &-title {
+                order: 2;
+            }
+
+            &-featured-image {
+                height: 265px;
+                margin-bottom: 0;
+                order: 1;
+            }
+
+            &-date {
+                height: 75px;
+                width: 80px;
+                time{
+                    font-size: calc(0.8rem + 0.1vw);
+                }
+            }
+        }
+    }
+
+    .wp-block-post {
+        position: relative;
+        border: 2px solid #d8d8d8;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+        &-featured-image {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            order: 1;
+        }
+        &-title {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            flex-wrap: wrap;
+            width: 80%;
+            margin: 0 auto !important;
+            padding: 0.6rem 2rem;
+            border-radius: 30px;
+            position: relative;
+            top: -1.5rem;
+            z-index: 2;	
+            font-size: calc(1em + 0.001vw);
+            background-color: colors.$color-secundary;
+            a {color: colors.$color-white !important;}
+        }
+
+        &-excerpt {
+            order: 3;
+            padding: 1rem;
+            margin-bottom: 10px !important;
+            text-align: center;
+        }
+
+        .wp-block-separator {
+            display: none;
+        }
+    }
+}

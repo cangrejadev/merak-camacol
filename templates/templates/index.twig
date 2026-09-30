@@ -1,0 +1,40 @@
+{#
+		Templates MRK Theme Merak - Single Post 
+		=========================
+		Description:
+		- Template 
+#}
+{% extends "templates/layouts/base.twig" %}
+
+{% block title %}
+   	<div class="container">
+		<div class="row">
+			<div class="col-12 mt-5">
+				<h1 class="">Buscador</h1>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+
+{% block content %}
+<div class="search-content" rol="wall">
+		<section class="container">
+			<div class="row">
+				<div class="col-4 search__searcher">
+					<h1 class="search-content__title">{{ _n("Showing <span>%d</span> search result for <span>%s</span>", "Showing <span class='type--italic'>%d</span> search results for <span class='type--italic'>%s</span>", posts.found_posts, MRK_D)|format(posts.found_posts, fn('get_search_query')) }}</h1>
+					{% include "organisms/forms/searchFilter.twig" %}
+				</div>
+				<div class="col-8 search-content__results">
+					<section class="grid">
+            {% for post in posts %}
+                {% include ["organisms/components/tease"~item.post_type~".twig", "organisms/components/tease.twig"] with {  'tease': post } %}
+            {% endfor %}
+       	</section>
+					<div class="container">
+        	{% include "molecules/navigation/pagination.twig" with { query: posts, mid_size: 2 } %}
+				</div>
+				</div>
+			</div>
+		</section>
+	</div>
+{% endblock %}

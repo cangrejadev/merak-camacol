@@ -1,0 +1,45 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	margin: 0;
+	font-family: vars.$font-body;
+	font-weight: normal;
+	line-height: 1.38em;
+	color: colors.$color-gray-90;
+	font-size: vars.$font-m;
+
+	&.stop-scrolling {
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+#main_content {
+	@media #{responsive.$desktop-general} {
+		// 	padding-top: 8.5rem;
+	}
+}
+section[role="wall"] a,
+footer a {
+	text-decoration: none;
+	transition:
+		background vars.$transition-time,
+		color vars.$transition-time;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+pre {
+	overflow-x: scroll;
+}

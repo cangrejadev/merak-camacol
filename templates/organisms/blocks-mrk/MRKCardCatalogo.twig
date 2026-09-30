@@ -1,0 +1,24 @@
+{#
+	Organism-Blocks MRK Theme Merak - Projects 
+	=========================
+	Description:
+	- Block for Projects
+	Campos: 
+	Titulo: {{ post.title }}
+	Enlace : {{ post.link }}
+	Fecha: {{ post.date }}
+	Imagen destacada: {{ post.thumbnail|adjust(450,250) }}
+	Extracto: {{ post.preview.length(20).read_more(false) }}
+	Tipo de post: {{post.post_type}}
+	ID: {{post.ID}}
+#}
+<section class="grid-articles">
+	{% set catalog = fn('json_decode', post.catalog) %}
+	{% for item in catalog %} 
+		{% include "organisms/components/card-catalogo.twig" with {  'catalogo': item } %}
+	{% endfor %}
+</section>
+{# <div class="container"> #}
+ 	{# {% include "molecules/navigation/pagination.twig" with { query: posts, mid_size: 2 } %} #}
+	{# {% include "molecules/navigation/pagination.twig" %} #}
+{# </div> #}

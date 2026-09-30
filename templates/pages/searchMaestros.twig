@@ -1,0 +1,28 @@
+{% extends "templates/index.twig" %}
+{% import "macros/forms.twig" as forms %}
+
+{% block title %}{% endblock %}
+{% block content %}
+	
+	{% include "organisms/forms/searchFilter.twig" %}
+
+	<section class="container search__results">
+		<h1 class="search__title">Showing
+			<span class="type--italic">10</span>
+			search results for
+			<span class="type--italic">Your research</span>
+		</h1>
+		{# <h1>{{ __('Showing', MRK_D) }} <span class="type--italic">{{ posts.found_posts }}</span> {{ __('search results for', MRK_D) }} <span class="type--italic">{{ search }}</span></h1> #}
+
+		<section class="grid-articles">
+			{% for maestro in maestros %}
+				{% include "organisms/components/tease-maestros.twig" with {  'maestro': maestro } %}
+			{% endfor %}
+		</section>
+		<div
+			class="container">
+			{% include "molecules/navigation/pagination.twig" with { query: posts, mid_size: 2 } %}
+			{# {% include "molecules/navigation/pagination.twig" %} #}
+		</div>
+	</section>
+{% endblock %}

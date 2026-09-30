@@ -1,0 +1,23 @@
+{#
+	Organism-Global Theme Merak - Header
+	=========================
+	Description:
+	- Header with 1 menu, logo on the left side.
+	- This file contains the markup for the main navigation.
+	- Cambiar header_layout por header_config.menu_layout
+#}
+{# {% set header_config.menu_layout = '' %} #}
+<header class="{{ html_classes("header","header--") }}">
+	{% block header %}
+
+		<nav class="navbar {% if header_config.menu_layout == 'center' %}navbar--logo-center {% else %}navbar--main{% endif %}" role="navigation">
+			{# Menu principal - Escritorio - Varia segun config logo centrado o a la izq #}
+			{% if header_config.menu_layout == "center" %}
+				{% include 'molecules/navigation/navbar__main--center.twig'%}
+			{% else %}
+				{% include 'molecules/navigation/navbar__main.twig' %}
+			{% endif %}
+		</nav>
+	{% endblock %}
+	{% include 'molecules/navigation/navbar__mobile.twig' with { 'menu':menu } %}
+</header>

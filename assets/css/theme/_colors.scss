@@ -1,0 +1,70 @@
+// Colores 
+$color-white: #ffffff;
+$color-gray-10: #F2F4F8;
+$color-gray-20: #DDE1E6;
+$color-gray-30: #C1C7CD;
+$color-gray-40: #A2A9B0; 
+$color-gray-50: #878D96;
+$color-gray-60: #697077;
+$color-gray-70: #4D5358;
+$color-gray-80: #343A3F;
+$color-gray-90: #21272A;
+$color-gray-100: #121619;
+$color-black: #000000;
+$color-success: #25A249;
+
+
+// dark-blue
+$color-primary: #001D6C; 
+
+// yellow
+$color-secundary: #f8bb18;
+//blue
+$color-tertiary: #254aa5;
+
+$title: $color-primary;
+
+// Menu
+// Menu--top
+$header-border: $color-secundary;
+
+// Menu--main 
+$header-background: $color-tertiary;
+$nav-link: $color-white;
+$nav-link-hover: $color-secundary;
+
+// Menu--fixed
+$header-background-fixed: $color-tertiary;
+$nav-link-fixed: $color-primary;
+
+// Menu slide - Movil 
+$navbar__menu-background: $color-tertiary;
+
+// Submenu 
+$submenu-background: $color-tertiary;
+$nav-link-submenu: $color-secundary;
+
+// Enlace 
+$enlace: $color-secundary;
+$enlace-hover: rgba($color: $color-secundary, $alpha: 0.5);
+
+// Footer
+$footer-background: rgba($color: $color-tertiary, $alpha: 1.0);
+$footer-text: #ffffff;
+
+// Menu footer
+$footer-menu-link: rgba($color: $color-white, $alpha: 1.0);
+$footer-menu-link-hover: rgba($color: $color-white, $alpha: 1.0);
+
+// Social media icon 
+$social-media-icon: $color-primary;
+$social-media-icon-hover: $color-secundary;
+$footer-social-media-icon: $color-white;
+$footer-social-media-icon-hover: $color-secundary;
+
+// Banner Post
+$banner-background:rgba($color: $color-gray-20, $alpha: 1.0);;
+
+.background--gray-10 {
+  background-color: $color-gray-10;
+}

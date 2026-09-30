@@ -1,0 +1,38 @@
+<div class="container profile">
+	<div class="row align-items-center">
+		<div class="col-5 profile__img">
+			{% if post.logo %}
+				{% set logo = get_image(post.logo) %}
+				<img src="{{ logo.src }}" alt="{{ post.title }}" class="img-fluid" loading="lazy"/>
+			{% endif %}
+		</div>
+		<div class="col-7 profile__info">
+			<p class="profile__info__speciality">{{ post.speciality }}</p>
+			<div class="profile__info__title">
+				<h1 class="profile__info__name">{{ post.name }}</h1>
+			</div>
+			<div class="profile__info__skills">
+				{% for skill in post.terms({taxonomy: 'project_type'}) %}
+					<span class="profile__info__skills__item">{{ skill.name }}</span>
+				{% endfor %}
+			</div>
+			<div class="profile__info__location">
+				<p class="profile__info__subtitle">Contacto</p>
+				<ul class="profile__info__contact">
+					<li class="profile__info__contact__item">
+						<i class="fa-solid fa-location-dot"></i>
+						{{ post.address }}</li>
+					<li class="profile__info__contact__item">
+						<i class="fa-solid fa-phone"></i>
+						{{ post.phone }}</li>
+					<li class="profile__info__contact__item">
+						<i class="fa-brands fa-whatsapp"></i>
+						{{ post.whatsapp }}</li>
+					<li class="profile__info__contact__item">
+						<i class="fa-solid fa-envelope"></i>
+						{{ post.email }}</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>

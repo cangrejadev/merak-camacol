@@ -1,0 +1,32 @@
+{#
+	Molecules-Navigation Theme Merak - Main Menu
+	=========================
+	Description:
+	- Default Navigation Bar. Logo and Menu on the left.
+	- This file contains the markup for the main navigation.
+	- The main navigation is used to demonstrate the different text styles.
+	- The main navigation is used to navigate the site.
+	NOTE:
+	- Se comenta el logo.twig
+	- Se debe usar el logo.twig para que se vea el logo correcto en la plantilla.
+#}
+	<div class="navbar__brand">
+		{{fn('get_custom_logo')}}
+	</div>
+	{# Menu de navegación #}
+	<div id="menu" class="navbar__menu navbar--menu-desktop justify-content-between" role="navigation">
+		{% if use_child_menu %}
+			{% include "molecules/navigation/child-menu.twig" with {
+				'items' : post.children('parent'),
+			} %}
+		{% else %}
+			{% include "molecules/navigation/menu.twig" with {
+				'menu' : menu_principal.get_items,
+			} %}
+		{% endif %}
+		{% include "molecules/navigation/menu_login.twig" with {
+				'menu' : menu_login.get_items,
+			} %}
+	</div>
+
+

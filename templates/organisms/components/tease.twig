@@ -1,0 +1,47 @@
+{#
+		Organism-Componets Theme Merak - Teaser 
+		=========================
+		Description:
+		- Tease Article Component for Post Grid and Slider
+		Campos: 
+			Titulo: {{ post.title }}
+			Enlace : {{ post.link }}
+			Fecha: {{ post.date }}
+			Imagen destacada: {{ post.thumbnail|adjust(450,250) }}
+			Extracto: {{ post.preview.length(20).read_more(false) }}
+			Tipo de post: {{post.post_type}}
+			ID: {{post.ID}}
+#}
+<article class="tease tease--{{tease.post_type}}" id="tease-{{tease.ID}}">
+	{% if tease.thumbnail is empty %}
+		{% set image = theme.link ~ '/build/media/images/tease.png' %}
+		<img class="tease__img" src="{{ image }}">
+	{% else %}
+		<img class="tease__img" src="{{ tease.thumbnail|adjust(298,220) }}">
+	{% endif %}
+	<div class="tease__post">
+		{% for term in tease.terms({taxonomy: 'category' }) %}
+			<span class="tease__category">{{ term.title }}</span>
+			{{ not loop.last ? 1 == loop.revindex0 ? __(' and ', MRK_D) : ', ' }}
+		{% endfor %}
+		<h2 class="tease__title">
+			<a href="{{ tease.link }}">{{ tease.title }}</a>
+		</h2>
+		<p class="tease__preview">{{ tease.excerpt.length(10).read_more(false) }}</p>
+		<div class="tease__author">
+			<div class="wp-block-post-author">
+				<div class="wp-block-post-author__avatar">
+					<img alt="" src="{{ tease.author.avatar }}" class="avatar avatar-48 photo" height="48" width="48" loading="lazy" decoding="async">
+				</div>
+				<div class="wp-block-post-author__content">
+					<p class="wp-block-post-author__byline">{{ tease.author.name }}</p>
+					<p class="wp-block-post-author__name">{{ tease.author.description }}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+			<div class="tease__link">
+			<a href="{{ tease.link }}">Leer más</a>
+			<i class="fa-solid fa-arrow-right"></i>
+		</div>
+</article>

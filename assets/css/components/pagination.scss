@@ -1,0 +1,82 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+.container-pagination{
+	margin: 1rem 0;
+	justify-content: end;
+	align-items: center;
+	flex-wrap: wrap;
+	text-align: right;
+
+	@media #{responsive.$large} {
+		margin: calc(#{vars.$base-margin} * 2)  auto !important;
+
+	}
+  .dashboard & {
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+	
+	span, a{
+		margin: 0;
+		padding: 10px;
+		font-family: vars.$font-title;
+		font-size: vars.$font-xs;
+		color: colors.$color-primary !important;
+		line-height: 1rem;
+
+		@media #{responsive.$large} {
+			padding: 10px;
+			font-size: vars.$font-m;
+		}
+
+	}
+	a{
+		&.icon {
+			padding: 0 !important;
+		}
+		&:hover{
+			color: colors.$color-secundary !important;
+		}
+	}
+	
+	.pagination-link {
+		display: inline-block;
+		width: 25px;
+		height: 25px;
+		margin: 0;
+		padding: .5rem;
+		border-radius: 40px;
+		color: colors.$color-primary;
+		font-family: vars.$font-body;
+		line-height: .5rem;
+		text-align: center;
+
+		@media #{responsive.$large} {
+			width: 40px;
+			height: 40px;
+			line-height: 1.5rem;
+		}
+
+		&:hover {
+			border-color: colors.$color-tertiary;
+			color: colors.$color-white !important;
+			background-color: colors.$color-tertiary;
+			opacity: .45;
+		}
+
+		&.current {
+			border-color: colors.$color-tertiary;
+			color: colors.$color-white !important;
+			background-color: colors.$color-tertiary;
+
+			&:hover{
+				opacity: .45;
+			}
+		}
+	}
+}

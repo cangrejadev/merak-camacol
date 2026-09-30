@@ -1,0 +1,98 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de WordPress de Botones
+
+.wp-block-buttons{
+    &.alignwide {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    &.alignfull {
+        max-width: 100%;
+        grid-template: 47px;
+        height: 100vh;
+        width: 100%;
+    }
+
+    &.alignright {
+        float: right;
+        margin-left: 10px;
+    }
+
+    &.alignleft {
+        float: left;
+        margin-right: 10px;
+    }
+    &.aligncenter {
+        margin: 0 auto;
+    }
+}
+
+.wp-block-button__link, .wp-element-button,.submit,.button,
+.logged-in.wp-block-loginout a, .error-button {
+    margin-right: 1rem;
+    font-family: vars.$font-title;
+    font-weight: vars.$medium;
+    letter-spacing: 0.5px;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    @include mixin.button (20px, colors.$color-secundary, 2px, colors.$color-secundary, .938rem,  colors.$color-gray-100 );   
+
+    &:hover{
+        border-color: colors.$color-primary;
+        background-color: colors.$color-primary;
+        color: colors.$color-white;
+    }
+    .is-style-outline &{
+        border-color: colors.$color-secundary !important;
+        color: colors.$color-white;
+        background-color: transparent;
+        &:hover{
+            border-color: colors.$color-primary !important;
+            color: colors.$color-primary !important;
+        }
+    }
+
+}
+.modal__info {
+    .is-style-outline {
+        input {
+            border-color: colors.$color-secundary !important;
+            border-width: 2px !important;
+            color: colors.$color-primary;
+            background-color: transparent;
+            &:hover{
+                border-color: colors.$color-primary !important;
+                color: colors.$color-primary !important;
+            }
+        }
+    }
+}
+
+.wp-block-button__link {
+    &.button--icon {
+        background-color: transparent;
+        border: 2px solid colors.$color-secundary;
+        &:hover{
+            border-color: colors.$color-primary !important;
+            color: colors.$color-primary !important;
+        }
+    }
+    i {
+       color: colors.$color-success;
+    }
+}
+// Boton inicio de sesión
+.logged-in.wp-block-loginout{
+    a{
+        display: inline-block;   
+        margin-bottom: 1rem; 
+    }
+}
+
+
+

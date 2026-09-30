@@ -1,0 +1,22 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque Cita WordPress
+
+.wp-block-quote, .wp-block-pullquote {
+    margin: 0.5rem 0;
+    padding: 0 1.25rem;
+    border-left: 2px solid colors.$color-primary;
+    p {
+        font-style: italic;
+        color: colors.$color-black;
+    }
+
+    cite {
+        color: colors.$color-tertiary;
+        font-size: 0.9rem;
+    }
+}

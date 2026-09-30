@@ -1,0 +1,15 @@
+{#
+	Organism-Blocks MRK Carousel Gallery
+	=========================
+	Description:
+	- Block to extend the WP gallery block
+	Campos: 
+#}
+<div class="carousel-default carousel--gallery owl-carousel owl-theme" data-columns="{{ columns }}" data-autoplay="{{ autoplay }}" data-nav="{{ nav }}" data-dots="{{ dots }}">
+	{% for image in gallery %}
+		{# {% set image =  get_image(id) %} #}
+		<div class="slider__item">
+			<img src="{{ image.src }}" alt="{{ image.alt }}">
+		</div>
+	{% endfor %}
+</div>

@@ -1,0 +1,77 @@
+{#
+		Templates MRK Theme Merak - Single Post 
+		=========================
+		Description:
+		- Template 
+ 
+		Campos: 
+			Tipo de entrada: {{ post.post_type }}
+			ID: {{ post.ID }}
+			Titulo: {{ post.title }}
+			Contenido: {{ post.content }}
+			Autor nombre: {{ post.author.name }}
+			Autor Enlace: {{ post.author.link }}
+			Fecha:  {{ post.date }}
+			Taxonomias: {{ post.categories }}
+			Etiquetas: {{ post.tags}}
+			Cabecera: {{ get_image(post.heading_desktop) }}
+			Cabecera tabletas: {{ get_image(post.heading_tablet) }}
+			Cabecera moviles: {{ get_image(post.heading_mobile) }}
+			thumbnail:  {{ post.thumbnail.src|resize(450, 450) }}
+			elementos relacionados por p2p: {{ post|apply_filters('p2p/relationships', 'post_to_page') }}
+#}
+
+<div class="container-fluid login">
+	<div class="row">
+		<div class="col-6 login__form__container">
+			<div id="login" class="login__form">
+				<h1 class="login__form__title">
+					Iniciar sesión
+				</h1>
+
+				<form name="loginform" id="loginform" action="http://127.0.0.1/wordpress/proyectos/wp-login.php" method="post">
+					<div class="form__group {{ classes }}">
+						<label for="user_login">Correo electrónico</label>
+						<input type="text" name="log" id="user_login" class="input" value="" size="20" autocapitalize="none" autocomplete="username" required="required">
+					</div>
+
+					<div class="user-pass-wrap">
+						<label for="user_pass">Contraseña</label>
+						<div class="wp-pwd">
+							<input type="password" name="pwd" id="user_pass" class="input password-input" value="" size="20" autocomplete="current-password" spellcheck="false" required="required">
+						</div>
+					</div>
+					<div class="row mt-2 mb-2">
+						<div class="forgetmenot col-6">
+							<input name="rememberme" type="checkbox" id="rememberme" value="forever">
+							<label for="rememberme">Recordar contraseña</label>
+						</div>
+						<div id="nav" class="col-6 text-align-right">
+							<a class="wp-login-lost-password" href="">¿Has olvidado tu contraseña?</a>
+						</div>
+					</div>
+					<div class="submit">
+						<input type="submit" name="wp-submit" id="wp-submit" class="button button-primary button-large" value="Iniciar sesión">
+						<input type="hidden" name="redirect_to" value="">
+						<input type="hidden" name="testcookie" value="1">
+					</div>
+				</form>
+				<p id="backtoblog">
+					<a href="">No tienes una cuenta aun? Registrate</a>
+				</p>
+			</div>
+		</div>
+		<div class="col-6 login__welcome__container">
+			<div class="login__welcome" style="background-image: url('../../images/login.png');">
+				<div class="login__welcome__logo">
+					{% include "atoms/images/logo-white.twig" %}
+				</div>
+				<div class="login__welcome__text">
+					<h1>¡Bienvenido!</h1>
+					<p>Conéctate con proveedores, financiadores y expertos del sector de la construcción.
+																																									Accede a oportunidades, recursos y una red de apoyo diseñada para impulsar tu crecimiento.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

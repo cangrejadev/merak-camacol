@@ -1,0 +1,39 @@
+{% extends "templates/layouts/base.twig" %}
+
+{# Esto es solo para patterns campos del form {% import "macros/forms.twig" as forms %} #}
+
+{% block content %}
+	<section
+		id="post-{{post.ID}}" class="post-type-{{post.post_type}}" role="wall">
+		{# {{post.content}} #}
+		{% include "organisms/blocks-mrk/Hero.twig" with { 
+			'img' : imgSearch,
+		}%}
+		
+		<div class="contact">
+			{% include "organisms/components/stepper.twig" %}
+			<form action="#" class="form form--contact row">
+				<h2 class="form__title">Ponte en contacto</h2>
+				<p class="form__subtitle">Si tienes alguna duda, pregunta o sugerencia, no dudes en ponerte en contacto con nosotros.</p>
+				{# {{ forms.input('Nombre','text','col-6') }}
+				{{ forms.input('Apellido','text','col-6') }}
+				{{ forms.input('Email', 'email','col-12') }}
+				{{ forms.input('Telefono', 'text','col-12') }}
+				{{ forms.textarea('Mensaje', 'Enter your message here','4','col-12') }} #}
+				<div class="form__group col-12">
+					<ul>
+						<li>
+							<label for="checkbox1"><input id="checkbox1" name="checkbox" type="checkbox" checked="checked">
+								Lorem ipsum dolor sit amet, consectetur .</label>
+						</li>
+					</ul>
+				</div>
+        <div class="wp-block-buttons is-content-justification-right is-layout-flex col-12">
+          <div class="wp-block-button is-style-slider-button">
+            <a href="{{ button_secondary.text }}" class="wp-block-button__link wp-element-button">Enviar</a>
+          </div>
+        </div>
+			</form>
+		</div>
+	</section>
+{% endblock %}

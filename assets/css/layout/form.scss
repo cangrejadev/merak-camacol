@@ -1,0 +1,209 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+input,
+select,
+textarea {
+    // width: 100%;
+    margin: .25rem;
+    padding: .75rem 1rem;
+    border-width: 0px;
+    border-bottom: 1px solid colors.$color-gray-30;
+    background-color: colors.$color-gray-10;
+    font-family: vars.$font-body;
+    font-size: vars.$font-m;
+    font-weight: vars.$regular;
+    color: colors.$color-gray-60;
+    line-height: 1.5em;
+
+    &.submit {
+        border-radius: 10px !important;
+    }
+
+    .newsletter & {
+        height: 40px;
+        border-color: colors.$color-secundary;
+    }
+
+    &[type="checkbox"],
+    &[type="radio"] {
+        width: auto !important;
+    }
+}
+
+input.wp-block-button__link {
+    width: auto;
+}
+
+label {
+    margin: 0.25rem;
+    font-family: vars.$font-body;
+    font-size: vars.$font-m;
+    font-weight: vars.$regular;
+    text-decoration: rgb(75, 83, 105);
+    line-height: 1.5rem;
+    color: colors.$color-gray-90;
+}
+
+select {
+    background-image:
+        linear-gradient(45deg, transparent 60%, gray 50%),
+        linear-gradient(135deg, gray 50%, transparent 50%),
+        linear-gradient(to right, #ccc, #ccc);
+    background-position:
+        calc(100% - 21px) calc(1.25em + 2px),
+        calc(100% - 15px) calc(1.25em + 2px),
+        calc(100% - 1.9em) 1em;
+    background-size:
+        6px 6px,
+        6px 6px,
+        1px 1em;
+    background-repeat: no-repeat;
+
+    /* reset */
+    padding: 0.75rem 1.5rem 0.75rem 1rem;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    &:focus {
+        background-repeat: no-repeat;
+        outline: 0;
+    }
+
+    &:-moz-focusring {
+        color: transparent;
+        text-shadow: 0 0 0 #000;
+      }
+}
+
+.form {
+    display: flex;
+
+    &__group {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        padding-right: .5rem;
+
+        .search__filter & {
+            margin-bottom: 0;
+        }
+
+        &.col-6 {
+
+            @media #{responsive.$small-general} {
+                padding-right: 0 !important;
+            }
+        }
+
+        &.without-label {
+            label {
+                display: none;
+            }
+        }
+
+        input,
+        select {
+            width: calc(100% - 0.25rem);
+        }
+    }
+
+    &--contact {
+        padding: 1.5rem;
+        background-color: colors.$color-white;
+
+        @media #{responsive.$large} {
+            padding: 3rem;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        color: colors.$color-gray-90;
+    }
+
+    &__subtitle {
+        width: 100%;
+        font-size: 1rem;
+        color: colors.$color-gray-40;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    textarea {
+        width: 100%;
+    }
+}
+
+.radio {
+    list-style: none;
+
+    label {
+        display: inline-flex;
+        align-items: center;
+    }
+}
+
+// Menu search 
+.navbar__search {
+    display: flex;
+    flex: 0 0 80%;
+    width: 80%;
+    margin: 1.5rem auto;
+    justify-content: center;
+    align-items: baseline;
+
+    &__inside-wrapper {
+        display: flex;
+        flex: auto;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        margin-right: 1rem;
+        padding: 0;
+        position: relative;
+    }
+
+    &__input {
+        flex-grow: 1;
+        margin: 0;
+        min-width: 3em;
+        padding: .813rem 3rem .813rem 1rem;
+        border-radius: 30px;
+        text-decoration: unset !important;
+    }
+
+    &__icon {
+        position: absolute;
+        top: calc(50% - 8px);
+        right: 2%;
+        color: colors.$color-gray-60;
+    }
+
+    &__button {
+        width: 180px;
+        padding: .7rem;
+        margin-right: 1rem;
+        font-family: vars.$font-title;
+        font-weight: vars.$medium;
+        transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+        @include mixin.button (30px, colors.$color-secundary, 2px, colors.$color-secundary, .938rem, colors.$color-gray-100 );
+
+        &:hover {
+            border-color: colors.$color-primary;
+            background-color: colors.$color-primary;
+            color: colors.$color-white;
+        }
+    }
+}

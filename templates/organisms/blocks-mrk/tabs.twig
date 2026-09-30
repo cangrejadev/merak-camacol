@@ -1,0 +1,22 @@
+{#
+	Block tabs 
+	Campos: 
+	Titulo: {{ tab.title }}
+  Contenido : {{ tab.content }}
+#}
+<div class="tab">
+	<ul class="tab__tabs tabs" id="myTab" role="tablist">
+		{% for tab in tabs %}
+			<li class="tab__nav">
+				<a class="" id="child{{ loop.index }}-tab" >{{ tab.title }}</a>
+			</li>
+		{% endfor %}
+	</ul>
+	<div class="tab__content tab_content" id="myTabContent">
+		{% for tab in tabs %}
+			<div class="tab__item tabs_item" id="child{{ loop.index }}">
+				{{ tab.content }}
+			</div>
+		{% endfor %}
+	</div>
+</div>

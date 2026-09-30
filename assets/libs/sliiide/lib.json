@@ -1,0 +1,9 @@
+{
+	"sliiide/sliiide.min.js": {
+		"type": "script",
+		"handle": "sliiide",
+		"dependencies": [
+			"jquery"
+		]
+	}
+}

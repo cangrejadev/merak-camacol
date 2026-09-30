@@ -1,0 +1,70 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de acordion
+.accordion {
+	margin: 1rem auto !important;
+	background: colors.$color-white;
+	border-radius: 20px;
+	border: 1px solid colors.$color-gray-20;
+	overflow: hidden;
+	transition: height 0.3s ease-in-out;
+	margin-bottom: 20px;
+
+	&__header {
+		padding: 1rem 3rem 1rem 1rem;
+		cursor: pointer;
+		user-select: none;
+		background-color: colors.$color-white;	
+
+		i {
+			-webkit-transition: all 0.3s ease-in-out;
+			-moz-transition: all 0.3s ease-in-out;
+			transition: all 0.3s ease-in-out;
+		}
+		.fa-minus{
+			display: none;
+		}
+		&.open {
+			border-bottom: none;
+			background-color: #F0F4FF;
+
+			.fa-plus {
+				display: none;
+			}
+			.fa-minus{
+				display: block;
+			}
+		}
+	}
+
+	&__title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: colors.$color-gray-90;
+		font-size: vars.$font-l;
+		width: 100%;
+		cursor: pointer;
+
+		i {
+			color: colors.$color-gray-90;
+			font-size: 1rem;
+		}
+	}
+	&__content {
+		// display: none;
+		// overflow: hidden;
+		background-color: #FFFFFF;
+		padding: 20px;
+
+		&.open {
+			// display: block;
+			// height: auto;
+			background-color: #F0F4FF;
+		}
+	}
+}

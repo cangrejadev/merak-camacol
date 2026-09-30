@@ -1,0 +1,35 @@
+{#
+		Organism-Componets Theme Merak - Teaser 
+		=========================
+		Description:
+		- Tease Article Component for Post Grid and Slider
+		Campos: 
+			Titulo: {{ post.title }}
+			Enlace : {{ post.link }}
+			Fecha: {{ post.date }}
+			Imagen destacada: {{ post.thumbnail|adjust(450,250) }}
+			Extracto: {{ post.preview.length(20).read_more(false) }}
+			Tipo de post: {{post.post_type}}
+			ID: {{post.ID}}
+#}
+
+<article class="tease tease--maestros tease-maestro" id="tease-{{item.uuid}}">
+	{% set maestro = datos_maestro(tease.id) %}
+	{% set image = get_image(maestro.foto) %}
+	{% if image %}
+		<div class="tease__profile" style="background-image: url('{{ image.src|resize(298,360,true) }}')"></div>
+	{% else %}
+		{% set image = theme.link ~ '/build/media/images/tease-maestro.png' %}
+		<div class="tease__profile" style="background-image: url('{{ image }}')"></div>
+	{% endif %}
+	<span class="tease__category">{{ maestro.especialidad }}</span>
+	<div class="tease__info">
+		<h2 class="tease__title">
+			{{ tease.title }}
+		</h2>
+		<div class="tease__score">
+			{{ icon_rating(maestro.calificacion_promedio) }}
+		</div>
+		<a class="tease__link" href="{{ url_maestro() }}uuid/{{ maestro.uuid }}">Ver perfil</a>
+	</div>
+</article>

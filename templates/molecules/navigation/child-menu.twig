@@ -1,0 +1,23 @@
+{#
+	Molecules-Navigation Theme Merak - Children Menu
+	=========================
+	Description:
+	- This file contains the markup for the children menu.
+	- The children menu is used to demonstrate the different text styles.
+
+	NOTE:
+
+#}
+{% if menu %}
+		<ul {% if id %} id="{{id}}" {% endif %} class="submenu">
+			{% for item in menu %}
+				<li class="{{ item.classes | join(' ') }} dropdown-item">
+					<a class="nav__link" href="{{ item.link }}" target="{{ item.meta('_menu_item_target') == '_blank' ? '_blank' : '_self' }}">{{ item.title }}</a>
+					{% include "molecules/navigation/child-menu.twig" with {
+						'menu' : item.children,
+						'class': 'container-subsubmenu'
+					} %}
+				</li>
+			{% endfor %}
+		</ul>
+{% endif %}

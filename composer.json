@@ -1,0 +1,102 @@
+{
+    "name": "baxtian/merak-camacol",
+    "version": "0.1.9",
+    "type": "base-theme",
+    "description": "Camacol",
+    "authors": [
+        {
+            "name": "Alejandra Zerda",
+            "email": "aleja533@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "baxtian/merak": "^0.5.31",
+        "baxtian/php-singleton": "^0.6.6",
+        "baxtian/wp_requirements": "^0.3.10",
+        "baxtian/merak-env": "^0.7.7",
+        "timber/timber": "^2.1",
+        "baxtian/wp_block": "^0.3.25",
+        "baxtian/wp_structure": "^0.2.36",
+        "baxtian/wp_taxonomy": "^0.2.15",
+        "baxtian/wp_p2p": "^0.5.24",
+        "baxtian/wp_importer": "^0.3.25",
+        "voku/simple_html_dom": "^4.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Merakcamacol\\": "src/"
+        }
+    },
+    "scripts": {
+        "readme": "curl -L https://raw.githubusercontent.com/fumikito/wp-readme/master/wp-readme.php | php",
+        "i18n": [
+            "MerakEnv\\MerakEnv::deleteLangJson",
+            "curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar",
+            "php wp-cli.phar i18n make-json languages --no-purge",
+            "MerakEnv\\MerakEnv::deleteWpCli"
+        ],
+        "test": "phpunit --testdox",
+        "test:coverage:open": "xdg-open ./tests/coverage_report/index.html",
+        "test:coverage": [
+            "php -dxdebug.mode=coverage ./vendor/bin/phpunit --coverage-html ./tests/coverage_report",
+            "@test:coverage:open"
+        ],
+        "version": "MerakEnv\\Version::update",
+        "build": [
+            "@silence",
+            "@readme",
+            "@composer install --no-dev -o",
+            "npm run build"
+        ],
+        "silence": [
+            "MerakEnv\\SilenceIsGold::apply"
+        ],
+        "clear": [
+            "MerakEnv\\Dist::clear"
+        ],
+        "reset": [
+            "MerakEnv\\Libs::update",
+            "MerakEnv\\Blocks::update",
+            "MerakEnv\\Src::update"
+        ],
+        "dist": [
+            "@clear",
+            "@version",
+            "@build",
+            "MerakEnv\\Dist::archive"
+        ],
+        "release": "@dist"
+    },
+    "archive": {
+        "exclude": [
+            "/.vscode/",
+            "/assets/",
+            "/tests/",
+            "/node_modules/",
+            "README.md",
+            "phpunit.xml",
+            ".gitignore",
+            ".cssrem",
+            "composer.*",
+            "package.json",
+            "package-lock.json",
+            "webpack.config.js",
+            "webpack.assets.js",
+            "merak-env",
+            "*.zip"
+        ]
+    },
+    "config": {
+        "platform": {
+            "php": "7.4"
+        },
+        "allow-plugins": {
+            "composer/installers": true
+        },
+        "platform-check": false
+    },
+    "require-dev": {
+        "php-stubs/woocommerce-stubs": "^8.5"
+    }
+}

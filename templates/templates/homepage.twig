@@ -1,0 +1,41 @@
+{#
+	Templates MRK Theme Merak - Home 
+	=========================
+	Description:
+	- Template de ejemplo para la home, no se deberia usar para el tema en
+	Campos:
+
+#}
+{% extends "templates/layouts/base.twig" %}
+{% block content %}
+	<section id="post-{{post.ID}}" class="post-type-{{post.post_type}} page__front" role="wall">
+		{# {{post.content}} #}
+		{% include "organisms/componentswp/cover.twig" %}
+		<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+		<h2 class="wp-block-heading has-text-align-center">Maestros de Obra</h2>
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		{% include "organisms/blocks-mrk/MRKMaestros.twig" %}
+		<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+		<h2 class="wp-block-heading has-text-align-center">Blog</h2>
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		{% include "organisms/blocks-mrk/LatestPost.twig" %}
+		<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+		<h2 class="wp-block-heading has-text-align-center">Proveedores</h2>
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		{% include "organisms/blocks-mrk/CarouserlGallery.twig" %}
+		<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+		<h2 class="wp-block-heading has-text-align-center">Financiadores</h2>
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		{% include "organisms/blocks-mrk/CarouserlGallery.twig"  with {
+			'gallery' : financiadores,
+		}	%}
+		<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+		<h2 class="wp-block-heading has-text-align-center">Preguntas frecuentes</h2>
+		<div style="height:60px" aria-hidden="true" class="wp-block-spacer"></div>
+		{% include "organisms/blocks-mrk/MRKAccordion.twig" with {
+			'accordion' : accordionHome,
+		} %}
+		<div style="height:80px" aria-hidden="true" class="wp-block-spacer"></div>
+
+	</section>
+{% endblock %}

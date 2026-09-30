@@ -1,0 +1,34 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque del logo de WordPress
+.wp-block-post-author {
+    padding-top: 1rem;
+
+    &__avatar {
+        .avatar {
+            border-radius: 50%;
+        }
+    }
+
+    &__content {
+        align-content: center;
+    }
+
+    &__byline {
+        margin-bottom: .25rem !important;
+        // font-family: vars.$font-title;
+        font-size: vars.$font-m;
+        font-weight: vars.$black;
+    }
+
+    &__name {
+        margin-bottom: .25rem !important;
+        font-family: vars.$font-body;
+        font-size: vars.$font-xs;
+        color: colors.$color-gray-60;
+    }
+}

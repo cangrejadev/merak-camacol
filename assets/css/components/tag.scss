@@ -1,0 +1,23 @@
+@use "../utilities/vars";
+@use "../theme/colors";
+@use "../tools/responsive";
+@use "../utilities/mixin";
+@use "../utilities/function";
+
+.tags {
+	margin: .5rem 0;
+	&__item {
+		display: inline-block;
+		margin: .5rem .125rem;
+		padding: .25rem .5rem;
+		border: 2px solid rgba($color: colors.$color-gray-40, $alpha: 0.2);
+		border-radius: 10px;
+		background-color: colors.$color-gray-10;
+		span {
+			margin-right: 8px;	
+		}
+		i{
+			color: colors.$color-gray-40;
+		}
+	}
+}

@@ -1,0 +1,20 @@
+@use "../../utilities/vars";
+@use "../../theme/colors";
+@use "../../tools/responsive";
+@use "../../utilities/mixin";
+@use "../../utilities/function";
+
+// Bloque de WordPress de categorias de entradas
+
+.wp-block-categories{
+    &.wp-block-categories-list {
+        .cat-item{
+            a {
+                color: colors.$color-gray-90;
+                &:hover{
+                    color: colors.$color-secundary;
+                }
+            }
+        }
+    }
+}
